@@ -1,0 +1,61 @@
+{
+    "Name": "Frozen Yogurt Machine",
+    "Description": "Chills and churns yogurt into a frozen treat.",
+    "Price": 1,
+    "ProvidesLight": false, 
+    "CanPurchase": false,
+    "ReserveExtraIndexCount": 5,
+    "Recipe":
+    {
+        "ResultCount": 1,
+        "Ingredients": [
+        {
+            "Object": 84,
+            "Count": 1,
+        },
+        {
+            "Object": 86,
+            "Count": 1,
+        },
+        {
+            "Object": 335,
+            "Count": 20,
+        },
+        {
+            "Object": 787,
+            "Count": 1,
+        }, ],
+        "CanPurchase": false,
+        "IsDefault": true,
+    },
+        "NameLocalization": //Used for localization. 
+        { 
+            "default": "Frozen Yogurt Machine",
+            "es": "", //Spansih
+            "ko": "", //Korean
+            "de": "", //German
+            "fr": "", //French
+            "hu": "", //Hungarian
+            "it": "", //Italian
+            "ja": "", //Japanese
+            "pt": "", //Portuguese
+            "ru": "", //Russian
+            "tr": "", //Turkish
+            "zh": "", //Chinese (Simplified)
+        },
+        "DescriptionLocalization": //Used for localization. 
+        { 
+            "default": "Chills and churns yogurt into a frozen treat.",
+            "es": "", //Spansih
+            "ko": "", //Korean
+            "de": "", //German
+            "fr": "", //French
+            "hu": "", //Hungarian
+            "it": "", //Italian
+            "ja": "", //Japanese
+            "pt": "", //Portuguese
+            "ru": "", //Russian
+            "tr": "", //Turkish
+            "zh": "", //Chinese (Simplified)
+        }
+    }

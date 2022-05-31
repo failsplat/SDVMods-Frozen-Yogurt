@@ -1,0 +1,12 @@
+[
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "Yogurt",
+      "InputStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Plain Frozen Yogurt",
+      "OutputStack": 1,
+      "InputPriceBased": false,
+      "Sounds": ["Ship"],
+  },
+]

@@ -1,0 +1,13 @@
+{
+    "Name": "[JA] Frozen Yogurt",
+    "Author": "Failsplat",
+    "Version": "0.1.0",
+    "Description": "Adds frozen yogurt made from Artisan Valley yogurt.",
+    "UniqueID": "Failsplat.FroyoJA",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "spacechase0.JsonAssets"
+    },
+    "Dependencies": [
+    ],
+}
