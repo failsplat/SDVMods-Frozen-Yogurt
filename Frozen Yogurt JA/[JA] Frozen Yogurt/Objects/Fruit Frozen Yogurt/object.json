@@ -1,0 +1,54 @@
+{
+    "Name": "Fruit Frozen Yogurt",
+    "Description": "Frozen yogurt with a swirl of fresh fruit. A nominally healthy desert.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 250,
+    "IsColored": true,
+    "DefaultColor": [255, 255, 255, 255],
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Fruit Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "Frozen yogurt with a swirl of fresh fruit. A nominally healthy desert.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
