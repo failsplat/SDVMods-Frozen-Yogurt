@@ -33,6 +33,10 @@ namespace FruitFroyo
                 original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.performObjectDropInAction)),
                 prefix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.performObjectDropInAction_prefix))
                 );
+            harmony.Patch(
+                original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.performObjectDropInAction)),
+                postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.performObjectDropInAction_postfix))
+                );
         }
     }
 
@@ -51,8 +55,12 @@ namespace FruitFroyo
             {
                 if (!probe) {
                     // Standing in for worky bits
-                    Monitor.Log(dropInItem.DisplayName, LogLevel.Debug);
-                }
+                    Monitor.Log("Prefix, Not Probe:" + dropInItem.DisplayName, LogLevel.Debug);
+                } 
+                /*else
+                {
+                    Monitor.Log("Prefix, Probe:"+dropInItem.DisplayName, LogLevel.Debug);
+                }*/
                 return true;
             }
             catch (Exception ex)
@@ -61,6 +69,28 @@ namespace FruitFroyo
                 return true;
             }
             
+        }
+
+        public static void performObjectDropInAction_postfix(Item dropInItem, bool probe, Farmer who)
+        {
+            try
+            {
+                if (!probe)
+                {
+                    Monitor.Log("Postfix, Not Probe:" + dropInItem.DisplayName, LogLevel.Debug);
+                } 
+                /*else
+                {
+                    Monitor.Log("Postfix, Probe:" + dropInItem.DisplayName, LogLevel.Debug);
+                }*/
+                //return true;
+            }
+            catch (Exception ex)
+            {
+                Monitor.Log($"Failed in {nameof(performObjectDropInAction_prefix)}:\n{ex}", LogLevel.Error);
+                //return true;
+            }
+
         }
     }
 
