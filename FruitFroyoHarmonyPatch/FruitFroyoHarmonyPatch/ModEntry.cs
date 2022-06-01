@@ -18,7 +18,7 @@ namespace FruitFroyo
         /// <param name="helper">Provides simplified APIs for writing mods.</param>
         public override void Entry(IModHelper helper)
         {
-            
+            helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
         }
 
 
@@ -35,7 +35,35 @@ namespace FruitFroyo
 
         private void ApplyPatches(Harmony harmony)
         {
-
+            harmony.Patch(
+                original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.performObjectDropInAction)),
+                prefix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.performObjectDropInAction_prefix))
+                );
         }
     }
+
+    public class ObjectPatches
+    {
+        private static IMonitor Monitor;
+        private static void Initialize(IMonitor monitor)
+        {
+            Monitor = monitor;
+        }
+
+        public static bool performObjectDropInAction_prefix(Item dropInItem, bool probe, Farmer who)
+        {
+            try
+            {
+                Monitor.Log(dropInItem.DisplayName, LogLevel.Debug);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Monitor.Log($"Failed in {nameof(performObjectDropInAction_prefix)}:\n{ex}", LogLevel.Error);
+                return true;
+            }
+            
+        }
+    }
+
 }
