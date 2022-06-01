@@ -11,26 +11,20 @@ namespace FruitFroyo
     /// <summary>The mod entry point.</summary>
     public class ModEntry : Mod
     {
-        /*********
-        ** Public methods
-        *********/
-        /// <summary>The mod entry point, called after the mod is first loaded.</summary>
-        /// <param name="helper">Provides simplified APIs for writing mods.</param>
+
+        private ObjectPatches objectPatches;
+
         public override void Entry(IModHelper helper)
         {
             helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
         }
 
 
-        /*********
-        ** Private methods
-        *********/
-        /// <summary>Raised after the player presses a button on the keyboard, controller, or mouse.</summary>
-        /// <param name="sender">The event sender.</param>
-        /// <param name="e">The event data.</param>
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
-            this.ApplyPatches(new Harmony(this.ModManifest.UniqueID));
+            Harmony harmony = new Harmony(this.ModManifest.UniqueID);
+            this.objectPatches = new ObjectPatches(this.Monitor);
+            this.ApplyPatches(harmony);
         }
 
         private void ApplyPatches(Harmony harmony)
@@ -45,7 +39,8 @@ namespace FruitFroyo
     public class ObjectPatches
     {
         private static IMonitor Monitor;
-        private static void Initialize(IMonitor monitor)
+
+        public ObjectPatches(IMonitor monitor)
         {
             Monitor = monitor;
         }
@@ -54,7 +49,9 @@ namespace FruitFroyo
         {
             try
             {
-                Monitor.Log(dropInItem.DisplayName, LogLevel.Debug);
+                if (!probe) { 
+                    Monitor.Log(dropInItem.DisplayName, LogLevel.Debug);
+                }
                 return true;
             }
             catch (Exception ex)
