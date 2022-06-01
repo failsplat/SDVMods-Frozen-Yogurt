@@ -351,3 +351,5 @@ MigrationBackup/
 
 # Copied Mod Folder
 Frozen Yogurt JA/\[HA\] Frozen Yogurt/*
+*.dll
+FruitFroyoHarmonyPatch/FruitFroyoHarmonyPatch/\[HA\] Frozen Yogurt/*
