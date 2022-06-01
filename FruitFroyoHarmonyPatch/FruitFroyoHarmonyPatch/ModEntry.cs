@@ -71,13 +71,14 @@ namespace FruitFroyo
             
         }
 
-        public static void performObjectDropInAction_postfix(Item dropInItem, bool probe, Farmer who)
+        public static void performObjectDropInAction_postfix(StardewValley.Object __instance, Item dropInItem, bool probe, Farmer who)
         {
             try
             {
                 if (!probe)
                 {
-                    Monitor.Log("Postfix, Not Probe:" + dropInItem.DisplayName, LogLevel.Debug);
+                    Monitor.Log("Item Name:"+dropInItem.DisplayName, LogLevel.Debug);
+                    Monitor.Log("Object Name:" + __instance.DisplayName, LogLevel.Debug);
                 } 
                 /*else
                 {
