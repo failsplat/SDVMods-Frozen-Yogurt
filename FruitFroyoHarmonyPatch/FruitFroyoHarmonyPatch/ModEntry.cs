@@ -49,7 +49,8 @@ namespace FruitFroyo
         {
             try
             {
-                if (!probe) { 
+                if (!probe) {
+                    // Standing in for worky bits
                     Monitor.Log(dropInItem.DisplayName, LogLevel.Debug);
                 }
                 return true;
