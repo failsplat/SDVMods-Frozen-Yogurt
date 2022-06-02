@@ -86,16 +86,16 @@ namespace FruitFroyo
                                         {
                                             case "color_white":
                                             case "color_sand":
-                                                parentColor.R = 255;
-                                                parentColor.G = 212;
-                                                parentColor.B = 125;
+                                                parentColor.R = 240;
+                                                parentColor.G = 160;
+                                                parentColor.B = 80;
                                                 break;
                                             case "color_yellow":
                                             case "color_light_yellow":
                                             case "color_dark_yellow":
                                                 parentColor.R = 255;
-                                                parentColor.G = 210;
-                                                parentColor.B = 69;
+                                                parentColor.G = 190;
+                                                parentColor.B = 0;
                                                 break;
                                             case "color_pink":
                                             case "color_light_pink":
