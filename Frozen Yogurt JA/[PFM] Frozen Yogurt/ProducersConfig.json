@@ -3,7 +3,7 @@
     "ProducerName": "Frozen Yogurt Machine", 
     "AlternateFrameProducing": false, 
     "AlternateFrameWhenReady": false, 
-    "DisableBouncingAnimationWhileWorking": true,
+    "DisableBouncingAnimationWhileWorking": false,
     "ProducingAnimation": { 
       "RelativeFrameIndex": [1,2,3,4], 
       "FrameInterval": 10 
