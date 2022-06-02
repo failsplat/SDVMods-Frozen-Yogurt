@@ -1,14 +1,5 @@
 [
-  {
-      "ProducerName": "Frozen Yogurt Machine",
-      "InputIdentifier": "Yogurt",
-      "InputStack": 1,
-      "MinutesUntilReady": 120,
-      "OutputIdentifier": "Plain Frozen Yogurt",
-      "OutputStack": 1,
-      "InputPriceBased": false,
-      "Sounds": ["Ship"],
-  },
+  // Fruit
   {
       "ProducerName": "Frozen Yogurt Machine",
       "InputIdentifier": "Fruit Yogurt",
@@ -60,6 +51,44 @@
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Honey Frozen Yogurt",
       "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  // Chocolate-Based Flavors
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "395",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "AdditionalFuel": {
+        "Chocolate":1,
+      },
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Mocha Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "Chocolate",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Chocolate Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  
+  // Plain
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "Yogurt",
+      "InputStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Plain Frozen Yogurt",
+      "OutputStack": 1,
+      "InputPriceBased": false,
       "Sounds": ["Ship"],
   },
 ]

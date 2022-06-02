@@ -13,7 +13,7 @@ New machine: Frozen Yogurt Machine! Converts Artisan Valley yogurt into frozen t
 Flavors available:
 - Plain Frozen Yogurt (just Yogurt)
 - Fruit Frozen Yogurt (just Fruit Yogurt, OR Fruit + Yogurt)
-- Coffee
+- Mocha (Coffee + Chocolate from PPJA More Recipes)
 - Green Tea
 - Chocolate (from PPJA More Recipes)
 - Vanilla (from PPJA More Trees)
