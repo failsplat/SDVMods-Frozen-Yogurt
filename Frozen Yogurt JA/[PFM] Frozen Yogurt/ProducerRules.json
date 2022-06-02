@@ -42,6 +42,7 @@
         "Blue": 100,
       },
   },
+  // Misc Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",
       "InputIdentifier": "340",
@@ -50,6 +51,17 @@
       "FuelStack": 1,
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Honey Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "815",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Green Tea Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
