@@ -1,6 +1,6 @@
 {
     "Name": "Honey Frozen Yogurt",
-    "Description": "Tangy yogurt and sweet honey, swirled together.",
+    "Description": "Tangy yogurt and sweet honey, swirled together into a sunny golden treat.",
     "Category": "ArtisanGoods",
     "Edibility": 15,
     "Price": 350,
@@ -37,7 +37,7 @@
     },
     "DescriptionLocalization":
     {
-        "default": "Tangy yogurt and sweet honey, swirled together.",
+        "default": "Tangy yogurt and sweet honey, swirled together into a sunny golden treat.",
         //"es": "",
         //"ko": "",
         //"de": "",
