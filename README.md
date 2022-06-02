@@ -23,6 +23,9 @@ Flavors available:
 - Chocolate Hazelnut (Hazelnut + Chocolate from PPJA More Recipes)
 - Nut Butter (any item with the "nut_item" or "ph_nut" context tags)
 - Pumpkin Pie (Pumpkin + Cinnamon + 2 Yogurt, makes 2 portions)
+- Prismatic (Prismatic Shard)
+- Caramel (from PPJA More Recipes)
+- Ginger (Ginger)
 All recipes have a Yogurt item, unless otherwise stated.
 
 
