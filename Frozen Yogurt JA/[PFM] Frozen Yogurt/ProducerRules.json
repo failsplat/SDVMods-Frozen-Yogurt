@@ -20,7 +20,7 @@
       "OutputStack": 1,
       "KeepInputParentIndex": true,
       "InputPriceBased": true,
-      "OutputPriceIncrement": 75,
+      "OutputPriceIncrement": 125,
       "Sounds": ["Ship"],
       "OutputColorConfig": {
         "Type": "ObjectDyeColor",
@@ -41,7 +41,7 @@
       "OutputTranslationKey": "FroyoMachine.FruitFroyo",
       "OutputStack": 1,
       "InputPriceBased": true,
-      "OutputPriceIncrement": 75,
+      "OutputPriceIncrement": 125,
       "OutputPriceMultiplier": 1.75,
       "Sounds": ["Ship"],
       "OutputColorConfig": {
@@ -51,28 +51,15 @@
         "Blue": 100,
       },
   },
-  //{
-  //    "ProducerName": "Yogurt Jar",
-  //    "InputIdentifier": "-79",
-  //    "InputStack": 1,
-  //    "FuelIdentifier": "-6",
-  //    "FuelStack": 1,
-  //    "MinutesUntilReady": 1600,
-  //    "OutputIdentifier": "Fruit Yogurt",
-  //    "OutputName": "{inputName} Yogurt",
-  //    "OutputTranslationKey": "YogurtJar.Fruit",
-  //    "InputPriceBased": true,
-  //    "OutputPriceIncrement": 0,
-  //    "OutputPriceMultiplier": 1.75,
-  //    "Sounds": ["Ship"],
-  //    
-  //    // Color-keeping override
-  //    "OverrideMod": ["ppja.artisanvalleyPFM"],
-  //    "OutputColorConfig": {
-  //    "Type": "ObjectDyeColor",
-  //      "Red": 255,
-  //      "Green": 0,
-  //      "Blue": 100,
-  //    },
-  //},
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "340",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Honey Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
 ]
