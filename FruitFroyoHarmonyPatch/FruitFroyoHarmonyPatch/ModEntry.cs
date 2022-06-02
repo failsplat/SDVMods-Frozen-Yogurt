@@ -82,12 +82,44 @@ namespace FruitFroyo
                                         Color parentColor = (Color) StardewValley.Menus.TailoringMenu.GetDyeColor(heldObjectParent);
 
                                         // Color Adjustment
-                                        parentColor.R = AdjustRBG(parentColor.R);
-                                        parentColor.G = AdjustRBG(parentColor.G);
-                                        parentColor.B = AdjustRBG(parentColor.B);
+                                        switch (contextTag)
+                                        {
+                                            case "color_white":
+                                            case "color_sand":
+                                                parentColor.R = 255;
+                                                parentColor.G = 212;
+                                                parentColor.B = 125;
+                                                break;
+                                            case "color_yellow":
+                                            case "color_light_yellow":
+                                            case "color_dark_yellow":
+                                                parentColor.R = 255;
+                                                parentColor.G = 210;
+                                                parentColor.B = 69;
+                                                break;
+                                            case "color_pink":
+                                            case "color_light_pink":
+                                            case "color_salmon":
+                                                parentColor = Color.HotPink;
+                                                break;
+                                            case "color_black":
+                                                parentColor = Color.DarkViolet;
+                                                break;
+                                            case "color_lime":
+                                                parentColor.R = 150;
+                                                parentColor.G = 220;
+                                                parentColor.B = 50;
+                                                break;
+                                            default:
+                                                parentColor.R = ChannelSigmoid(parentColor.R);
+                                                parentColor.G = ChannelSigmoid(parentColor.G);
+                                                parentColor.B = ChannelSigmoid(parentColor.B);
+                                                break;
+                                        }
 
                                         StardewValley.Objects.ColoredObject asColoredObject = (StardewValley.Objects.ColoredObject) __instance.heldObject.Get();
                                         asColoredObject.color.Set(parentColor);
+                                        heldObject.GetContextTags().Add(contextTag);
                                         Monitor.Log("Recolored " + heldObject.DisplayName + " to:" + contextTag, LogLevel.Trace);
                                         break;
                                     }
@@ -109,7 +141,7 @@ namespace FruitFroyo
             }
         }
 
-        private static byte AdjustRBG(byte r, int midpoint=128, double flatten=16, double bleachWeight=0.25)
+        private static byte ChannelSigmoid(byte r, int midpoint=128, double flatten=16, double bleachWeight=0.25)
         {
             double res = 255 / (
                 1 + Math.Pow(
