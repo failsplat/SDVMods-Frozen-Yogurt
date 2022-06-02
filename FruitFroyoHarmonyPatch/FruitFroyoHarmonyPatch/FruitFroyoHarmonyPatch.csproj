@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+	<EnableHarmony>true</EnableHarmony>
+	<EnableModDeploy>false</EnableModDeploy>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.0.1" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="XCOPY &quot;$(TargetDir)*.dll&quot; &quot;$(ProjectDir)\[HA] Frozen Yogurt\&quot;&#xD;&#xA;XCOPY &quot;$(TargetDir)*.pdb&quot; &quot;$(ProjectDir)\[HA] Frozen Yogurt\&quot;&#xD;&#xA;XCOPY &quot;$(TargetDir)*.deps.json&quot; &quot;$(ProjectDir)\[HA] Frozen Yogurt\&quot;&#xD;&#xA;XCOPY &quot;$(TargetDir)manifest.json&quot; &quot;$(ProjectDir)\[HA] Frozen Yogurt\&quot;&#xD;&#xA;XCOPY /y /f &quot;$(ProjectDir)\[HA] Frozen Yogurt\&quot; &quot;$(ProjectDir)\..\..\Frozen Yogurt JA\[HA] Frozen Yogurt\&quot;" />
+  </Target>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="RD /S /Q &quot;$(ProjectDir)\[HA] Frozen Yogurt&quot;&#xD;&#xA;echo F|XCOPY /y &quot;$(ProjectDir)manifest.json&quot; &quot;$(TargetDir)manifest.json&quot;" />
+  </Target>
+
+</Project>

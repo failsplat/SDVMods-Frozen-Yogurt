@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FruitFroyoHarmonyPatch": {
+      "commandName": "Project",
+      "commandLineArgs": "--mods-path \"Mods-Dev\""
+    }
+  }
+}
