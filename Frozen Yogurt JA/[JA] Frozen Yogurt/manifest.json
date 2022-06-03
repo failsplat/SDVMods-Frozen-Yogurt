@@ -4,7 +4,7 @@
     "Version": "1.0.0",
     "Description": "Adds frozen yogurt made from Artisan Valley yogurt.",
     "UniqueID": "Failsplat.FroyoJA",
-    "UpdateKeys": [],
+    "UpdateKeys": [ "Nexus:12308" ],
     "ContentPackFor": {
         "UniqueID": "spacechase0.JsonAssets"
     },
