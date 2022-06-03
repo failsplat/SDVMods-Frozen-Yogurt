@@ -1,0 +1,54 @@
+{
+    "Name": "Ginger Frozen Yogurt",
+    "Description": "A nice candied ginger kick adds a bit of flair to this tangy frozen yogurt.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 350,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_gold",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Ginger Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "A nice candied ginger kick adds a bit of flair to this tangy frozen yogurt.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
