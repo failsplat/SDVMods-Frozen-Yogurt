@@ -142,6 +142,28 @@
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "279",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 4,
+      "MinutesUntilReady": 360,
+      "OutputIdentifier": "Prismatic Frozen Yogurt",
+      "OutputStack": 4,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "74",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 360,
+      "OutputIdentifier": "Prismatic Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
   // Nut-Based Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",

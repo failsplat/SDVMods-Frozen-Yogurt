@@ -1,0 +1,58 @@
+{
+    "Name": "Prismatic Frozen Yogurt",
+    "Description": "A mystical confluence of mysterious flavors, infused into frozen yogurt.",
+    "Category": "ArtisanGoods",
+    "Edibility": 40,
+    "Price": 2500,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": {
+      "Farming": 3,
+      "Fishing": 3,
+      "Mining": 3,
+      "Luck": 5,
+      "Attack": 3,
+      "Defense": 3,
+      "Duration": 360,
+      "Foraging": 3,
+    },
+    "GiftTastes":
+    {
+        "Love": ["Vincent", "Sandy", "Demetrius", "Harvey", "Jodi", "Kent", "Leah", "Linus", "Pam", "Robin", "Shane", "Alex", "Caroline", "Clint", "Dwarf", "Emily", "Evelyn", "George", "Gus", 
+        "Leo", "Lewis", "Marnie", "Maru", "Penny", "Pierre", "Sam", "Sebastian", "Wizard", "Abigail", "Haley", "Jas", "Vincent", "Krobus", "Willy"],
+    },
+    "ContextTags":
+    [
+      "color_iridium",
+    ],
+    "NameLocalization":
+    {
+        "default":"Prismatic Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+      "default":"A mystical confluence of mysterious flavors, infused into frozen yogurt.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
