@@ -9,5 +9,21 @@
         "UniqueID": "spacechase0.JsonAssets"
     },
     "Dependencies": [
+      {
+        "UniqueID": "paradigmnomad.morefood",
+        "IsRequired": false,
+      },
+      {
+        "UniqueID": "ppja.moretrees",
+        "IsRequired": false,
+      },
+      {
+        "UniqueID": "ppja.fruitsandveggies",
+        "IsRequired": false,
+      },
+      {
+        "UniqueID": "ppja.evenmorerecipes",
+        "IsRequired": false,
+      },
     ],
 }

@@ -6,6 +6,7 @@
     "Price": 480,
     "IsColored": false,
     "EdibleIsDrink": false,
+    "EnableWithMod": "paradigmnomad.morefood",
     "EdibleBuffs": {
       "Farming": 0,
       "Fishing": 0,
