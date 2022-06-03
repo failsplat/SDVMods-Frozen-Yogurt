@@ -98,6 +98,28 @@
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "608",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 2,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Pumpkin Pie Frozen Yogurt",
+      "OutputStack": 2,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "Cheesecake",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 2,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Cheesecake Frozen Yogurt",
+      "OutputStack": 2,
+      "Sounds": ["Ship"],
+  },
   // Nut-Based Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",

@@ -8,6 +8,7 @@
 - PPJA Fruits and Veggies
 - PPJA More Trees
 - PPJA More Recipes
+- PPJA Even More Recipes
 ## Contents
 New machine: Frozen Yogurt Machine! Converts Artisan Valley yogurt into frozen treats!
 Flavors available:
@@ -22,10 +23,11 @@ Flavors available:
 - Mint (Mint from PPJA Fruits and Veggies)
 - Chocolate Hazelnut (Hazelnut + Chocolate from PPJA More Recipes)
 - Nut Butter (any item with the "nut_item" or "ph_nut" context tags)
-- Pumpkin Pie (Pumpkin + Cinnamon + 2 Yogurt, makes 2 portions)
-- Prismatic (Prismatic Shard)
-- Caramel (from PPJA More Recipes)
+- Pumpkin Pie (Pumpkin Pie + 2 Yogurt, makes 2 portions)
+- Cheesecake (from PPJA Even More Recipes)
+- Caramel (from PPJA Even More Recipes)
 - Ginger (Ginger)
+- Prismatic (Prismatic Shard)
 All recipes have a Yogurt item, unless otherwise stated.
 
 
