@@ -120,6 +120,17 @@
       "OutputStack": 2,
       "Sounds": ["Ship"],
   },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "Caramel",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 2,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Caramel Frozen Yogurt",
+      "OutputStack": 2,
+      "Sounds": ["Ship"],
+  },
   // Nut-Based Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",

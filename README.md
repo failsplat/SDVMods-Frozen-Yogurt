@@ -26,7 +26,7 @@ Flavors available:
 - Pumpkin Pie (Pumpkin Pie + 2 Yogurt, makes 2 portions)
 - Cheesecake (from PPJA Even More Recipes)
 - Caramel (from PPJA Even More Recipes)
-- Ginger (Ginger)
+- Ginger
 - Prismatic (Prismatic Shard)
 All recipes have a Yogurt item, unless otherwise stated.
 
