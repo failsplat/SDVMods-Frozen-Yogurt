@@ -65,6 +65,28 @@
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "223",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Cookies and Cream Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "Vanilla",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 2,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Vanilla Frozen Yogurt",
+      "OutputStack": 2,
+      "Sounds": ["Ship"],
+  },
   // Chocolate-Based Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",
