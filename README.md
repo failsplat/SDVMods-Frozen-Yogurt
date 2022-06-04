@@ -28,6 +28,7 @@ Flavors available:
 - Caramel (from PPJA Even More Recipes)
 - Ginger
 - Prismatic (Prismatic Shard)
+
 All recipes have a Yogurt item, unless otherwise stated.
 
 
