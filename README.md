@@ -37,3 +37,19 @@ All recipes have a Yogurt item, unless otherwise stated.
 2. Download this mod folder.
 3. Put the unzipped content packs into `Stardew Valley/Mods` to install them.
 4. Run the game using SMAPI.
+
+## Planned Expansion
+"Normal" Flavors:
+- Specific Fruit Flavors (eg. Mango)
+- Fruit Combinations, either specific or generic (eg. Mango-Chili, Strawberry-Kiwi, Spicy Fruit)
+- Taro
+- Maple (Maple Syrup)
+- Eggnog (Egg + Cinnamon)
+
+I am planning on splitting off these flavors as a submod/expansion in separate folders, so users can decide whether they want to use them.
+"Fantasy" Flavors:
+- Void (Void Egg + Eucalyptus Leaves)
+- Primeval (Dino Egg + Ancient Fruit)
+- Frost Fairy (Fairy Dust + Crystal Fruit)
+- Galactic (Solar Essence + Starfruit)
+- Island Cinder (Cinder Shard + Ginger)
