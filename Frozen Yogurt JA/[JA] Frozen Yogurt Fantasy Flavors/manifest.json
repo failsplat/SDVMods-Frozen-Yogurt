@@ -1,0 +1,37 @@
+{
+    "Name": "[JA] Frozen Yogurt - Fantasy Flavors",
+    "Author": "Failsplat",
+    "Version": "1.0.1",
+    "Description": "A Frozen Yogurt flavor pack for supernaturally tasty, fantastic frozen yogurts.",
+    "UniqueID": "Failsplat.FroyoFantasyJA",
+    "UpdateKeys": [ "Nexus:12308" ],
+    "ContentPackFor": {
+        "UniqueID": "spacechase0.JsonAssets"
+    },
+    "Dependencies": [
+      {
+        "UniqueID": "Failsplat.FroyoJA",
+        "IsRequired": true,
+      },
+      {
+        "UniqueID": "ppja.artisanvalleymachinegoods",
+        "IsRequired": true,
+      },
+      {
+        "UniqueID": "paradigmnomad.morefood",
+        "IsRequired": false,
+      },
+      {
+        "UniqueID": "ppja.moretrees",
+        "IsRequired": false,
+      },
+      {
+        "UniqueID": "ppja.fruitsandveggies",
+        "IsRequired": false,
+      },
+      {
+        "UniqueID": "ppja.evenmorerecipes",
+        "IsRequired": false,
+      },
+    ],
+}
