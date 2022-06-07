@@ -1,9 +1,9 @@
 {
-    "Name": "[JA] Frozen Yogurt - Fantasy Flavors",
+    "Name": "[JA] Frozen Yogurt - Fruit Mix",
     "Author": "Failsplat",
     "Version": "1.0.1",
-    "Description": "A Frozen Yogurt flavor pack for supernaturally tasty, fantastic frozen yogurts.",
-    "UniqueID": "Failsplat.FroyoFantasyJA",
+    "Description": "A Frozen Yogurt flavor pack for fruity flavor combos.",
+    "UniqueID": "Failsplat.FroyoFruitMixJA",
     "UpdateKeys": [ "Nexus:12308" ],
     "ContentPackFor": {
         "UniqueID": "spacechase0.JsonAssets"

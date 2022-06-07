@@ -1,9 +1,9 @@
 {
-    "Name": "[JA] Frozen Yogurt - Fantasy Flavors",
+    "Name": "[JA] Frozen Yogurt - Starbrew Flavors",
     "Author": "Failsplat",
     "Version": "1.0.1",
-    "Description": "A Frozen Yogurt flavor pack for supernaturally tasty, fantastic frozen yogurts.",
-    "UniqueID": "Failsplat.FroyoFantasyJA",
+    "Description": "A Frozen Yogurt flavor pack based on vanilla and Starbrew Valley alcoholic drinks.",
+    "UniqueID": "Failsplat.FroyoBrewJA",
     "UpdateKeys": [ "Nexus:12308" ],
     "ContentPackFor": {
         "UniqueID": "spacechase0.JsonAssets"
