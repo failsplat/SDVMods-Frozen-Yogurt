@@ -13,7 +13,8 @@ Adds a Frozen Yogurt Machine to produce a variety of froyo flavors from Artisan 
 New machine: Frozen Yogurt Machine! Converts Artisan Valley yogurt into frozen treats!
 Flavors available:
 - Plain Frozen Yogurt (just Yogurt)
-- Fruit Frozen Yogurt (just Fruit Yogurt, OR Fruit + Yogurt)
+- Specific Fruit flavors for: All base game fruits, Lemon, Lime
+- General Fruit Frozen Yogurt (any other Fruit + Yogurt, or any Fruit Yogurt)
 - Mocha (Coffee + Chocolate from PPJA More Recipes)
 - Green Tea
 - Chocolate (from PPJA More Recipes)
@@ -27,8 +28,9 @@ Flavors available:
 - Cheesecake (from PPJA Even More Recipes)
 - Caramel (from PPJA Even More Recipes)
 - Ginger
-- Prismatic (Prismatic Shard)
 
+Fantasy Flavor Set
+- Prismatic (Prismatic Shard, or Magic Rock Candy (makes 4))
 All recipes have a Yogurt item, unless otherwise stated.
 
 
@@ -37,19 +39,5 @@ All recipes have a Yogurt item, unless otherwise stated.
 2. Download this mod folder.
 3. Put the unzipped content packs into `Stardew Valley/Mods` to install them.
 4. Run the game using SMAPI.
-
-## Planned Expansion
-"Normal" Flavors:
-- Specific Fruit Flavors (eg. Mango)
-- Fruit Combinations, either specific or generic (eg. Mango-Chili, Strawberry-Kiwi, Spicy Fruit)
-- Taro
-- Maple (Maple Syrup)
-- Eggnog (Egg + Cinnamon)
-
-I am planning on splitting off these flavors as a submod/expansion in separate folders, so users can decide whether they want to use them.
-"Fantasy" Flavors:
-- Void (Void Egg + Eucalyptus Leaves)
-- Primeval (Dino Egg + Ancient Fruit)
-- Frost Fairy (Fairy Dust + Crystal Fruit)
-- Galactic (Solar Essence + Starfruit)
-- Island Cinder (Cinder Shard + Ginger)
+The "Full Version" of this mod contains the main mod plus all of the flavor expansions.
+This mod is also available with the core and flavor submods separated. If you want only certain flavor sets, install the core set, plus any desired submods. Do not have multiple installations of this mod.

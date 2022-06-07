@@ -23,6 +23,10 @@
   {
       "ProducerName": "Frozen Yogurt Machine",
       "InputIdentifier": "-79",
+      "ExcludeIdentifiers": [
+        "454", // Ancient Fruit
+        "613", // Apple
+      ],
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
       "FuelStack": 1,
@@ -41,6 +45,28 @@
         "Green": 0,
         "Blue": 100,
       },
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "454",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Ancient Fruit Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "613",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Apple Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
   },
   // Misc Flavors
   {
