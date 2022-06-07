@@ -1,9 +1,9 @@
 {
-    "Name": "Apple Frozen Yogurt",
-    "Description": "As crisp and chilly as a bright autumn day.",
+    "Name": "Blackberry Frozen Yogurt",
+    "Description": "This frozen yogurt is stained a deep purple from fresh blackberries.",
     "Category": "ArtisanGoods",
     "Edibility": 15,
-    "Price": 350,
+    "Price": 300,
     "IsColored": false,
     "EdibleIsDrink": false,
     "EdibleBuffs": null,
@@ -11,7 +11,7 @@
     "ContextTags":
     [
       "universal_like",
-      "color_light_yellow",
+      "color_purple",
     ],
     "GiftTastes":
     {
@@ -23,7 +23,7 @@
     },
     "NameLocalization":
     {
-        "default":"Apple Frozen Yogurt",
+        "default":"Blackberry Frozen Yogurt",
         //"es": "",
         //"ko": "",
         //"de": "",
@@ -38,7 +38,7 @@
     },
     "DescriptionLocalization":
     {
-        "default": "As crisp and chilly as a bright autumn day.",
+        "default": "This frozen yogurt is stained a deep purple from fresh blackberries.",
         //"es": "",
         //"ko": "",
         //"de": "",

@@ -26,6 +26,8 @@
       "ExcludeIdentifiers": [
         "454", // Ancient Fruit
         "613", // Apple
+        "91", // Banana
+        "410", // Blackberry
       ],
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -65,6 +67,28 @@
       "FuelStack": 1,
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Apple Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "91",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Banana Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "410",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Blackberry Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
