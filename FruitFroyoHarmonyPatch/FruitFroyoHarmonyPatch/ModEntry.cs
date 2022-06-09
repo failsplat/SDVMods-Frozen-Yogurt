@@ -58,10 +58,17 @@ namespace FruitFroyo
                 {
                     //Monitor.Log("Item Name:"+dropInItem.DisplayName, LogLevel.Debug);
                     //Monitor.Log("Object Name:" + dropInItem.DisplayName, LogLevel.Debug);
+
+                    if (__instance.name != "Frozen Yogurt Machine")
+                    {
+                        return;
+                    }
+
                     StardewValley.Object heldObject = __instance.heldObject.Get();
                     if (heldObject == null) 
-                    { 
-                        //Monitor.Log("No Held Object", LogLevel.Debug); 
+                    {
+                        //Monitor.Log("No Held Object", LogLevel.Debug);
+                        return; 
                     }
                     else
                     {
