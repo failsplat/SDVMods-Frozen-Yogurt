@@ -1,0 +1,54 @@
+{
+    "Name": "Grape Frozen Yogurt",
+    "Description": "Fresh grape juice turns this frozen yogurt a deep magenta.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 300,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_purple",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Grape Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "Fresh grape juice turns this frozen yogurt a deep magenta.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}

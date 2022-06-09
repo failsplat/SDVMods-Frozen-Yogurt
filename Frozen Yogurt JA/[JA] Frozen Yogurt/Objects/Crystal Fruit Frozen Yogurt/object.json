@@ -1,0 +1,54 @@
+{
+    "Name": "Crystal Fruit Frozen Yogurt",
+    "Description": "This frozen yogurt shimmers and sparkles with ice crystals.",
+    "Category": "ArtisanGoods",
+    "Edibility": 25,
+    "Price": 400,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_light_blue",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Crystal Fruit Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "This frozen yogurt shimmers and sparkles with ice crystals.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
