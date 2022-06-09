@@ -29,6 +29,8 @@
         "91", // Banana
         "410", // Blackberry
         "258", // Blueberry
+        "90", // Cactus Fruit
+        "638", // Cherry
       ],
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -101,6 +103,28 @@
       "FuelStack": 1,
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Blueberry Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "90",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Cactus Fruit Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "638",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Cherry Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
