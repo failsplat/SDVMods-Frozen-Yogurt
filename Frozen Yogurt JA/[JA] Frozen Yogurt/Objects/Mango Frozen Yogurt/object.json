@@ -1,0 +1,54 @@
+{
+    "Name": "Mango Frozen Yogurt",
+    "Description": "A frozen yogurt as golden as a tropical sunset.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 400,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_golden",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Mango Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "A frozen yogurt as golden as a tropical sunset.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}

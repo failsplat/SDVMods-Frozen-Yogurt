@@ -35,6 +35,8 @@
         "282", // Cranberries
         "414", // Crystal Fruit
         "398", // Grape
+        "260", // Hot Pepper
+        "834", // Mango
       ],
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -173,6 +175,28 @@
       "FuelStack": 1,
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Grape Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "260",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Hot Pepper Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "834",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Mango Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
