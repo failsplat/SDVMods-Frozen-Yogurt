@@ -1,0 +1,54 @@
+{
+    "Name": "Orange Frozen Yogurt",
+    "Description": "Sun-ripened oranges make this a mellow-tasting flavor of frozen yogurt.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 300,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_light_orange",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Orange Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "Sun-ripened oranges make this a mellow-tasting flavor of frozen yogurt.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
