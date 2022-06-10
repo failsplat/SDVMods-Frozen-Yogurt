@@ -7,7 +7,7 @@ Added update key
 ### 2.0.0
 Split flavors into submods for easier customization of flavor set
 New flavors:
- - (Specific Fruit) Ancient Fruit, Apple, Banana, Blackberry, Blueberry, Cactus Fruit, Cherry, Coconut, Cranberry, Crystal Fruit, Grape, Hot Pepper, Mango, Pink Melon, Orange, Peach, Pineapple, Pomegranate
+ - (Specific Fruit) Ancient Fruit, Apple, Banana, Blackberry, Blueberry, Cactus Fruit, Cherry, Coconut, Cranberry, Crystal Fruit, Grape, Hot Pepper, Mango, Pink Melon, Orange, Peach, Pineapple, Pomegranate, Salmonberry
  - (Fantasy Flavors) Qi's Frozen Yogurt
 Tweaks to Harmony patch
 ### Future

@@ -43,6 +43,7 @@
         "832", // Pineapple
         "637", // Pomegranate
         "889", // Qi Fruit
+        "296", // Salmonberry
       ],
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -258,6 +259,17 @@
       "FuelStack": 1,
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Pomegranate Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "296",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Salmonberry Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
