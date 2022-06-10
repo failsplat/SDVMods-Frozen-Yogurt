@@ -41,6 +41,8 @@
         "635", // Orange
         "636", // Peach
         "832", // Pineapple
+        "637", // Pomegranate
+        "889", // Qi Fruit
       ],
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -248,6 +250,17 @@
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "637",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Pomegranate Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
   // Misc Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",
@@ -348,6 +361,7 @@
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
+  // Fantasy Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",
       "InputIdentifier": "279",
@@ -367,6 +381,17 @@
       "FuelStack": 1,
       "MinutesUntilReady": 360,
       "OutputIdentifier": "Prismatic Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "889",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 360,
+      "OutputIdentifier": "Qi's Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
