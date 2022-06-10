@@ -39,6 +39,8 @@
         "834", // Mango
         "254", // Melon
         "635", // Orange
+        "636", // Peach
+        "832", // Pineapple
       ],
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -221,6 +223,28 @@
       "FuelStack": 1,
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Orange Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "636",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Peach Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "832",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Pineapple Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
