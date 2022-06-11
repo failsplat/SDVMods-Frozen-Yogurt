@@ -46,6 +46,7 @@
         "296", // Salmonberry
         "396", // Spice Berry
         "268", // Starfruit
+        "400", // Strawberry
       ],
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -294,6 +295,17 @@
       "FuelStack": 1,
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Starfruit Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "400",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Strawberry Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
