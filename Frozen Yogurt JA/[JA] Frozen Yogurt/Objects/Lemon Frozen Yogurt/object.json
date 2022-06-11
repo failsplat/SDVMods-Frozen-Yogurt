@@ -1,17 +1,18 @@
 {
-    "Name": "Strawberry Frozen Yogurt",
-    "Description": "Frozen yogurt decorated with strawberry halves.",
+    "Name": "Lemon Frozen Yogurt",
+    "Description": "A sharp lemon-yellow color and a sharp lemon flavor.",
     "Category": "ArtisanGoods",
     "Edibility": 15,
-    "Price": 350,
+    "Price": 300,
     "IsColored": false,
     "EdibleIsDrink": false,
     "EdibleBuffs": null,
+    "EnableWithMod" : "ppja.moretrees",
     "Recipe": null,
     "ContextTags":
     [
       "universal_like",
-      "color_red",
+      "color_yellow",
     ],
     "GiftTastes":
     {
@@ -23,7 +24,7 @@
     },
     "NameLocalization":
     {
-        "default":"Strawberry Frozen Yogurt",
+        "default":"Lemon Frozen Yogurt",
         //"es": "",
         //"ko": "",
         //"de": "",
@@ -38,7 +39,7 @@
     },
     "DescriptionLocalization":
     {
-        "default": "Frozen yogurt decorated with strawberry halves.",
+        "default": "A sharp lemon-yellow color and a sharp lemon flavor.",
         //"es": "",
         //"ko": "",
         //"de": "",
