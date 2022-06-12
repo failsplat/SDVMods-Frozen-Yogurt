@@ -31,9 +31,8 @@ Flavors available:
 
 Fantasy Flavor Set
 - Prismatic (Prismatic Shard, or Magic Rock Candy (makes 4))
+- Qi's (Qi Fruit)
 All recipes have a Yogurt item, unless otherwise stated.
-
-
 ## Install
 1. [Install the latest version of SMAPI](https://smapi.io/).
 2. Download this mod folder.
