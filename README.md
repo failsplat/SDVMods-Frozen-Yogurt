@@ -11,7 +11,7 @@ Adds a Frozen Yogurt Machine to produce a variety of froyo flavors from Artisan 
 - PPJA Even More Recipes
 ## Contents
 New machine: Frozen Yogurt Machine! Converts Artisan Valley yogurt into frozen treats!
-Flavors available:
+Main Flavors available:
 - Plain Frozen Yogurt (just Yogurt)
 - Specific Fruit flavors for: Most base game fruits, Lemon, Lime, Kiwi
 - General Fruit Frozen Yogurt (any other Fruit + Yogurt, or any Fruit Yogurt)
