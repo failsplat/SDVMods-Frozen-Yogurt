@@ -1,5 +1,5 @@
 [
-  // Fruit
+  // Primary Fruit
   {
       "ProducerName": "Frozen Yogurt Machine",
       "InputIdentifier": "Fruit Yogurt",
@@ -456,6 +456,28 @@
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "395",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Coffee Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "Chocolate",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Chocolate Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
   // Fantasy Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",
@@ -493,20 +515,6 @@
   // Nut-Based Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",
-      "InputIdentifier": "408",
-      "InputStack": 1,
-      "FuelIdentifier": "Yogurt",
-      "FuelStack": 1,
-      "AdditionalFuel": {
-        "Chocolate":1,
-      },
-      "MinutesUntilReady": 120,
-      "OutputIdentifier": "Chocolate Hazelnut Frozen Yogurt",
-      "OutputStack": 1,
-      "Sounds": ["Ship"],
-  },
-  {
-      "ProducerName": "Frozen Yogurt Machine",
       "InputIdentifier": "nut_item",
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -537,9 +545,25 @@
       "OutputPriceMultiplier": 1.75,
       "Sounds": ["Ship"],
   },
-  // Chocolate-Based Flavors
   {
       "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "408",
+      "InputStack": 1,
+      "FuelIdentifier": "Yogurt",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Nut Butter Frozen Yogurt",
+      "OutputName": "{inputName} Butter Frozen Yogurt",
+      "OutputTranslationKey": "FroyoMachine.NutFroyo",
+      "OutputStack": 1,
+      "InputPriceBased": true,
+      "OutputPriceIncrement": 125,
+      "OutputPriceMultiplier": 1.75,
+      "Sounds": ["Ship"],
+  },
+  // Choco Swirl Flavors
+  {
+      "ProducerName": "Chocolate Swirl Machine",
       "InputIdentifier": "395",
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
@@ -553,13 +577,16 @@
       "Sounds": ["Ship"],
   },
   {
-      "ProducerName": "Frozen Yogurt Machine",
-      "InputIdentifier": "Chocolate",
+      "ProducerName": "Chocolate Swirl Machine",
+      "InputIdentifier": "408",
       "InputStack": 1,
       "FuelIdentifier": "Yogurt",
       "FuelStack": 1,
+      "AdditionalFuel": {
+        "Chocolate":1,
+      },
       "MinutesUntilReady": 120,
-      "OutputIdentifier": "Chocolate Frozen Yogurt",
+      "OutputIdentifier": "Chocolate Hazelnut Frozen Yogurt",
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },

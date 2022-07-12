@@ -1,0 +1,62 @@
+{
+    "Name": "Coffee Frozen Yogurt",
+    "Description": "Fresh coffee in refreshing frozen yogurt.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 450,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EnableWithMod": "paradigmnomad.morefood",
+    "EdibleBuffs": {
+      "Farming": 0,
+      "Fishing": 0,
+      "Mining": 0,
+      "Luck": 1,
+      "Duration": 120,
+      "Speed": 1,
+    },
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_brown",
+    ],
+    "GiftTastes":
+    {
+        "Love": ["Harvey"],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": ["Leo"],
+        "Hate": ["Jas", "Vincent"],
+    },
+    "NameLocalization":
+    {
+        "default":"Coffee Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "Fresh coffee in refreshing frozen yogurt.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
