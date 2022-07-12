@@ -1,0 +1,17 @@
+{
+    "Name": "[JA] Frozen Yogurt - Chocolate Swirl",
+    "Author": "Failsplat",
+    "Version": "1.5.0",
+    "Description": "A Frozen Yogurt flavor pack for chocolate-swirled flavors.",
+    "UniqueID": "Failsplat.FroyoChocoSwirl",
+    "UpdateKeys": [ "Nexus:12308" ],
+    "ContentPackFor": {
+        "UniqueID": "spacechase0.JsonAssets"
+    },
+    "Dependencies": [
+      {
+        "UniqueID": "Failsplat.FroyoJA",
+        "IsRequired": true,
+      },
+    ],
+}

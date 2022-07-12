@@ -13,4 +13,32 @@
       "RelativeFrameIndex": [5],
     },
   },
+  {
+    "ProducerName": "Fruit Froyo Swirler", 
+    "AlternateFrameProducing": false, 
+    "AlternateFrameWhenReady": false, 
+    "DisableBouncingAnimationWhileWorking": false,
+    "ProducingAnimation": { 
+      "RelativeFrameIndex": [1,2,3,4], 
+      "FrameInterval": 10 
+    },
+    "ReadyAnimation": 
+    {
+      "RelativeFrameIndex": [5],
+    },
+  },
+  {
+    "ProducerName": "Chocolate Swirl Machine", 
+    "AlternateFrameProducing": false, 
+    "AlternateFrameWhenReady": false, 
+    "DisableBouncingAnimationWhileWorking": false,
+    "ProducingAnimation": { 
+      "RelativeFrameIndex": [1,2,3,4], 
+      "FrameInterval": 10 
+    },
+    "ReadyAnimation": 
+    {
+      "RelativeFrameIndex": [5],
+    },
+  },
 ]

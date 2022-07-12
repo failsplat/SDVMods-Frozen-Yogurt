@@ -1,0 +1,62 @@
+{
+    "Name": "Chocolate Swirl Machine",
+    "Description": "Adds a swirl of chocolate to frozen yogurt.",
+    "Price": 1,
+    "ProvidesLight": false, 
+    "CanPurchase": false,
+    "ReserveExtraIndexCount": 5,
+    "DisableWithMod": "Failsplat.ChocoSwirl",
+    "Recipe":
+    {
+        "ResultCount": 1,
+        "Ingredients": [
+        {
+            "Object": 787,
+            "Count": 1,
+        },
+        {
+            "Object": 335,
+            "Count": 10,
+        },
+        {
+            "Object": 336,
+            "Count": 10,
+        },
+        {
+            "Object": 562,
+            "Count": 1,
+        },],
+        "CanPurchase": false,
+        "IsDefault": true,
+    },
+        "NameLocalization": //Used for localization. 
+        { 
+            "default": "Chocolate Swirl Machine",
+            "es": "", //Spansih
+            "ko": "", //Korean
+            "de": "", //German
+            "fr": "", //French
+            "hu": "", //Hungarian
+            "it": "", //Italian
+            "ja": "", //Japanese
+            "pt": "", //Portuguese
+            "ru": "", //Russian
+            "tr": "", //Turkish
+            "zh": "", //Chinese (Simplified)
+        },
+        "DescriptionLocalization": //Used for localization. 
+        { 
+            "default": "Adds a swirl of chocolate to frozen yogurt.",
+            "es": "", //Spansih
+            "ko": "", //Korean
+            "de": "", //German
+            "fr": "", //French
+            "hu": "", //Hungarian
+            "it": "", //Italian
+            "ja": "", //Japanese
+            "pt": "", //Portuguese
+            "ru": "", //Russian
+            "tr": "", //Turkish
+            "zh": "", //Chinese (Simplified)
+        }
+    }

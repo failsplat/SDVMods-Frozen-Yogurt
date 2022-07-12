@@ -10,8 +10,11 @@ Adds a Frozen Yogurt Machine to produce a variety of froyo flavors from Artisan 
 - PPJA More Recipes
 - PPJA Even More Recipes
 ## Contents
-New machine: Frozen Yogurt Machine! Converts Artisan Valley yogurt into frozen treats!
-Main Flavors available:
+New machines: 
+Frozen Yogurt Machine! Converts Artisan Valley yogurt into frozen treats!
+Fruit Froyo Swirler - Combines fruit flavors!
+Chocolate Swirl Machine - Adds a chocolate swirl to frozen desserts! (Planned: standalone version including chocolate-swirl ice creams)
+# Main Flavors:
 - Plain Frozen Yogurt (just Yogurt)
 - Specific Fruit flavors for: Most base game fruits, Lemon, Lime, Kiwi
 - General Fruit Frozen Yogurt (any other Fruit + Yogurt, or any Fruit Yogurt)
@@ -28,8 +31,10 @@ Main Flavors available:
 - Cheesecake (from PPJA Even More Recipes)
 - Caramel (from PPJA Even More Recipes)
 - Ginger
-
-Fantasy Flavor Set
+- Taro
+# Fruit Swirl Flavors:
+# Chocolate Swirl Flavors:
+# Fantasy Flavor Set:
 - Prismatic (Prismatic Shard, or Magic Rock Candy (makes 4))
 - Qi's (Qi Fruit)
 All recipes have a Yogurt item, unless otherwise stated.
