@@ -1,0 +1,55 @@
+{
+    "Name": "Double Chocolate Frozen Yogurt",
+    "Description": "Chocolate frozen yogurt, with an added swirl of yet more chocolate.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 960,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "EnableWithMod": "paradigmnomad.morefood",
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_brown",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Double Chocolate Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "Chocolate frozen yogurt, with an added swirl of yet more chocolate.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
