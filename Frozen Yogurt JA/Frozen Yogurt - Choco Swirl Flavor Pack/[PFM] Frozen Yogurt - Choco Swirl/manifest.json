@@ -1,0 +1,25 @@
+{
+   "Name": "[PFM] Frozen Yogurt - Choco Swirl",
+   "Author": "Failsplat",
+   "Description": "Adds chocolate swirl machine recipes for Frozen Yogurt.",
+   "Version": "1.5.0",
+   "UniqueID": "Failsplat.FroyoPFMChocoSwirl",
+     "UpdateKeys": [],
+    "ContentPackFor": {
+      "UniqueID": "DIGUS.ProducerFrameworkMod"
+    },
+  "Dependencies": [
+    {
+      "UniqueID": "Failsplat.FroyoChocoSwirl",
+      "IsRequired": true,
+    },
+    {
+      "UniqueID": "ppja.artisanvalleymachinegoods",
+      "IsRequired": true,
+    },
+    {
+      "UniqueID": "ppja.artisanvalleyPFM",
+      "IsRequired": true,
+    },
+  ]
+}

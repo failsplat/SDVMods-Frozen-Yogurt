@@ -1,0 +1,25 @@
+{
+   "Name": "[PFM] Frozen Yogurt",
+   "Author": "Failsplat",
+   "Description": "Adds mixed fruit flavor machine recipes for Frozen Yogurt.",
+   "Version": "1.5.0",
+   "UniqueID": "Failsplat.FroyoPFM",
+     "UpdateKeys": [],
+    "ContentPackFor": {
+      "UniqueID": "DIGUS.ProducerFrameworkMod"
+    },
+  "Dependencies": [
+    {
+      "UniqueID": "Failsplat.FroyoFruitMixJA",
+      "IsRequired": true,
+    },
+    {
+      "UniqueID": "ppja.artisanvalleymachinegoods",
+      "IsRequired": true,
+    },
+    {
+      "UniqueID": "ppja.artisanvalleyPFM",
+      "IsRequired": true,
+    },
+  ]
+}
