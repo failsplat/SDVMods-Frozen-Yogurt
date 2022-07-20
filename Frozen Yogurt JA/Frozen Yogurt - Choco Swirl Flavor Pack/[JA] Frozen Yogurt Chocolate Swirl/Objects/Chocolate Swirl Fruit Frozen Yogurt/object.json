@@ -1,18 +1,17 @@
 {
-    "Name": "Double Chocolate Frozen Yogurt",
-    "Description": "Chocolate frozen yogurt, with an added swirl of yet more chocolate.",
+    "Name": "Chocolate Swirl Fruit Frozen Yogurt",
+    "Description": "Frozen with swirls of fruit and chocolate flavors. May have unexpected flavor combinations.",
     "Category": "ArtisanGoods",
     "Edibility": 15,
-    "Price": 960,
-    "IsColored": false,
+    "Price": 750,
+    "IsColored": true,
+    "DefaultColor": [255, 255, 255, 255],
     "EdibleIsDrink": false,
     "EdibleBuffs": null,
-    "EnableWithMod": "paradigmnomad.morefood",
     "Recipe": null,
     "ContextTags":
     [
       "universal_like",
-      "color_brown",
     ],
     "GiftTastes":
     {
@@ -24,7 +23,7 @@
     },
     "NameLocalization":
     {
-        "default":"Double Chocolate Frozen Yogurt",
+        "default":"Chocolate Swirl Fruit Frozen Yogurt",
         //"es": "",
         //"ko": "",
         //"de": "",
@@ -39,7 +38,7 @@
     },
     "DescriptionLocalization":
     {
-        "default": "Chocolate frozen yogurt, with an added swirl of yet more chocolate.",
+        "default": "Frozen with swirls of fruit and chocolate flavors. May have unexpected flavor combinations.",
         //"es": "",
         //"ko": "",
         //"de": "",

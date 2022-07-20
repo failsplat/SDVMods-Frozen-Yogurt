@@ -59,7 +59,7 @@ namespace FruitFroyo
                     //Monitor.Log("Item Name:"+dropInItem.DisplayName, LogLevel.Debug);
                     //Monitor.Log("Object Name:" + dropInItem.DisplayName, LogLevel.Debug);
 
-                    if (__instance.name != "Frozen Yogurt Machine")
+                    if (__instance.name != "Frozen Yogurt Machine" && __instance.name != "Chocolate Swirl Machine")
                     {
                         return;
                     }
@@ -72,8 +72,9 @@ namespace FruitFroyo
                     }
                     else
                     {
+                        // Recoloring:
                         StardewValley.Object heldObjectBase = new StardewValley.Object(parentSheetIndex: heldObject.ParentSheetIndex, initialStack: 1);
-                        if (heldObjectBase.Name == "Fruit Frozen Yogurt")
+                        if (heldObjectBase.Name == "Fruit Frozen Yogurt" || heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt")
                         {
                             //Monitor.Log("Fruit Froyo!", LogLevel.Debug);
                             int heldObjectPPSI = heldObject.preservedParentSheetIndex.Get();
