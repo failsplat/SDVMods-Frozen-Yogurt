@@ -13,6 +13,7 @@ namespace FruitFroyo
     {
 
         private ObjectPatches objectPatches;
+        private IJsonAssetsApi jsonAssets;
 
         public override void Entry(IModHelper helper)
         {
@@ -23,8 +24,10 @@ namespace FruitFroyo
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
             Harmony harmony = new Harmony(this.ModManifest.UniqueID);
-            this.objectPatches = new ObjectPatches(this.Monitor);
+            this.jsonAssets = Helper.ModRegistry.GetApi<IJsonAssetsApi>("spacechase0.JsonAssets");
+            this.objectPatches = new ObjectPatches(this.Monitor, this.jsonAssets);
             this.ApplyPatches(harmony);
+            
         }
 
         private void ApplyPatches(Harmony harmony)
@@ -40,18 +43,53 @@ namespace FruitFroyo
         }
     }
 
+    public interface IJsonAssetsApi
+    {
+        int GetObjectId(string name);
+    }
+
     public class ObjectPatches
     {
         private static IMonitor Monitor;
+        private static IJsonAssetsApi jsonAssets;
+        private static readonly System.Collections.Generic.Dictionary<String, String> FruitFroyoSpecificFruits = new() {
+            { "Ancient Fruit","Ancient Fruit Frozen Yogurt" },
+            { "Apple", "Apple Frozen Yogurt" },
+            { "Banana", "Banana Frozen Yogurt" },
+            { "Blackberry", "Blackberry Frozen Yogurt" },
+            { "Blueberry", "Blueberry Frozen Yogurt" },
+            { "Cactus Fruit", "Cactus Fruit Frozen Yogurt" },
+            { "Cherry", "Cherry Frozen Yogurt" },
+            { "Coconut", "Coconut Frozen Yogurt" },
+            { "Cranberries", "Cranberry Frozen Yogurt" },
+            { "Crystal Fruit", "Crystal Fruit Frozen Yogurt" },
+            { "Grape", "Grape Frozen Yogurt" },
+            { "Hot Pepper", "Hot Pepper Frozen Yogurt" },
+            { "Mango", "Mango Frozen Yogurt" },
+            { "Melon", "Pink Melon Frozen Yogurt" },
+            { "Orange", "Orange Frozen Yogurt" },
+            { "Peach", "Peach Frozen Yogurt" },
+            { "Pineapple", "Pineapple Frozen Yogurt" },
+            { "Pomegranate", "Pomegranate Frozen Yogurt" },
+            { "Qi Fruit", "Qi's Frozen Yogurt" },
+            { "Salmonberry", "Salmonberry Frozen Yogurt" },
+            { "Spice Berry", "Spice Berry Frozen Yogurt" },
+            { "Starfruit", "Starfruit Frozen Yogurt" },
+            { "Strawberry", "Strawberry Frozen Yogurt" },
+            { "Lemon", "Lemon Frozen Yogurt" },
+            { "Lime", "Lime Frozen Yogurt" },
+            { "Kiwi", "Kiwi Frozen Yogurt" },
+        };
+        private static readonly System.Collections.Generic.Dictionary<String, String> ChocoFruitFroyoSpecificFruits = new() { };
 
-        public ObjectPatches(IMonitor monitor)
+        public ObjectPatches(IMonitor monitorIn, IJsonAssetsApi jsonAssetsIn)
         {
-            Monitor = monitor;
+            Monitor = monitorIn;
+            jsonAssets = jsonAssetsIn;
         }
 
         public static void performObjectDropInAction_postfix(StardewValley.Object __instance, Item dropInItem, bool probe, Farmer who)
         {
-            // After putting an item in a machine, recolor fruit frozen yogurt items based on the color tags of the fruit
             try
             {
                 if (!probe)
@@ -59,11 +97,12 @@ namespace FruitFroyo
                     //Monitor.Log("Item Name:"+dropInItem.DisplayName, LogLevel.Debug);
                     //Monitor.Log("Object Name:" + dropInItem.DisplayName, LogLevel.Debug);
 
-                    if (__instance.name != "Frozen Yogurt Machine")
+                    // Check Machine
+                    if (__instance.name != "Frozen Yogurt Machine" && __instance.name != "Chocolate Swirl Machine")
                     {
                         return;
                     }
-
+                    // Check Held Object
                     StardewValley.Object heldObject = __instance.heldObject.Get();
                     if (heldObject == null) 
                     {
@@ -72,6 +111,7 @@ namespace FruitFroyo
                     }
                     else
                     {
+                        // Check Held Object is Generic Flavor Froyo
                         StardewValley.Object heldObjectBase = new StardewValley.Object(parentSheetIndex: heldObject.ParentSheetIndex, initialStack: 1);
                         if (heldObjectBase.Name == "Fruit Frozen Yogurt")
                         {
@@ -81,54 +121,68 @@ namespace FruitFroyo
                             {
                                 StardewValley.Object heldObjectParent = new StardewValley.Object(parentSheetIndex: heldObjectPPSI, initialStack: 1);
                                 //Monitor.Log("Held Object Parent Name:" + heldObjectParent.DisplayName, LogLevel.Debug);
-
-                                foreach (string contextTag in heldObjectParent.GetContextTagList())
+                                if (FruitFroyoSpecificFruits.ContainsKey(heldObjectParent.Name)) // Replacement of Generic Fruit Froyo or Chocolate-Swirl Fruit Froyo with a specific variety
                                 {
-                                    if (contextTag.StartsWith("color_")) {
-                                        heldObject.GetContextTags().Add(contextTag);
-                                        Color parentColor = (Color) StardewValley.Menus.TailoringMenu.GetDyeColor(heldObjectParent);
+                                    __instance.heldObject.Value = new StardewValley.Object(
+                                        parentSheetIndex:jsonAssets.GetObjectId(FruitFroyoSpecificFruits[heldObjectParent.Name]), 
+                                        initialStack:1
+                                        );
+                                }
+                                else if (false) 
+                                {
 
-                                        // Color Adjustment
-                                        switch (contextTag)
+                                }
+                                else // Otherwise, recolor the generic Fruit Froyo
+                                {
+                                    foreach (string contextTag in heldObjectParent.GetContextTagList())
+                                    {
+                                        if (contextTag.StartsWith("color_"))
                                         {
-                                            case "color_white":
-                                            case "color_sand":
-                                                parentColor.R = 240;
-                                                parentColor.G = 160;
-                                                parentColor.B = 80;
-                                                break;
-                                            case "color_yellow":
-                                            case "color_light_yellow":
-                                            case "color_dark_yellow":
-                                                parentColor.R = 255;
-                                                parentColor.G = 190;
-                                                parentColor.B = 0;
-                                                break;
-                                            case "color_pink":
-                                            case "color_light_pink":
-                                            case "color_salmon":
-                                                parentColor = Color.HotPink;
-                                                break;
-                                            case "color_black":
-                                                parentColor = Color.DarkViolet;
-                                                break;
-                                            case "color_lime":
-                                                parentColor.R = 150;
-                                                parentColor.G = 220;
-                                                parentColor.B = 50;
-                                                break;
-                                            default:
-                                                parentColor.R = ChannelSigmoid(parentColor.R);
-                                                parentColor.G = ChannelSigmoid(parentColor.G);
-                                                parentColor.B = ChannelSigmoid(parentColor.B);
-                                                break;
-                                        }
+                                            heldObject.GetContextTags().Add(contextTag);
+                                            Color parentColor = (Color)StardewValley.Menus.TailoringMenu.GetDyeColor(heldObjectParent);
 
-                                        StardewValley.Objects.ColoredObject asColoredObject = (StardewValley.Objects.ColoredObject) __instance.heldObject.Get();
-                                        asColoredObject.color.Set(parentColor);
-                                        heldObject.GetContextTags().Add(contextTag);
-                                        Monitor.Log("Recolored " + heldObject.DisplayName + " to:" + contextTag, LogLevel.Trace);
-                                        break;
+                                            // Color Adjustment
+                                            switch (contextTag)
+                                            {
+                                                case "color_white":
+                                                case "color_sand":
+                                                    parentColor.R = 240;
+                                                    parentColor.G = 160;
+                                                    parentColor.B = 80;
+                                                    break;
+                                                case "color_yellow":
+                                                case "color_light_yellow":
+                                                case "color_dark_yellow":
+                                                    parentColor.R = 255;
+                                                    parentColor.G = 190;
+                                                    parentColor.B = 0;
+                                                    break;
+                                                case "color_pink":
+                                                case "color_light_pink":
+                                                case "color_salmon":
+                                                    parentColor = Color.HotPink;
+                                                    break;
+                                                case "color_black":
+                                                    parentColor = Color.DarkViolet;
+                                                    break;
+                                                case "color_lime":
+                                                    parentColor.R = 150;
+                                                    parentColor.G = 220;
+                                                    parentColor.B = 50;
+                                                    break;
+                                                default:
+                                                    parentColor.R = ChannelSigmoid(parentColor.R);
+                                                    parentColor.G = ChannelSigmoid(parentColor.G);
+                                                    parentColor.B = ChannelSigmoid(parentColor.B);
+                                                    break;
+                                            }
+
+                                            StardewValley.Objects.ColoredObject asColoredObject = (StardewValley.Objects.ColoredObject)__instance.heldObject.Get();
+                                            asColoredObject.color.Set(parentColor);
+                                            heldObject.GetContextTags().Add(contextTag);
+                                            Monitor.Log("Recolored " + heldObject.DisplayName + " to:" + contextTag, LogLevel.Trace);
+                                            break;
+                                        }
                                     }
                                 }
                                 
@@ -160,4 +214,5 @@ namespace FruitFroyo
             return Convert.ToByte(res);
         }
     }
+
 }
