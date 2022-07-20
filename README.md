@@ -18,14 +18,14 @@ Chocolate Swirl Machine - Adds a chocolate swirl to frozen desserts! (Planned: s
 - Plain Frozen Yogurt (just Yogurt)
 - Specific Fruit flavors for: Most base game fruits, Lemon, Lime, Kiwi
 - General Fruit Frozen Yogurt (any other Fruit + Yogurt, or any Fruit Yogurt)
-- Mocha (Coffee + Chocolate from PPJA More Recipes)
+- Coffee
 - Green Tea
 - Chocolate (from PPJA More Recipes)
 - Vanilla (from PPJA More Trees)
 - Cookies and Cream (Cookies)
 - Honey
 - Mint (Mint from PPJA Fruits and Veggies)
-- Chocolate Hazelnut (Hazelnut + Chocolate from PPJA More Recipes)
+- Hazelnut (Hazelnut)
 - Nut Butter (any item with the "nut_item" or "ph_nut" context tags)
 - Pumpkin Pie (Pumpkin Pie + 2 Yogurt, makes 2 portions)
 - Cheesecake (from PPJA Even More Recipes)
@@ -34,6 +34,19 @@ Chocolate Swirl Machine - Adds a chocolate swirl to frozen desserts! (Planned: s
 - Taro
 # Fruit Swirl Flavors:
 # Chocolate Swirl Flavors:
+Most recipes take in 1 basic froyo flavor from the "Main Flavors", adding chocolate
+Implemented:
+- Mocha (Coffee)
+- Double Chocolate (Chocolate)
+- Chocolate Hazelnut
+
+Planned:
+- Chocolate Flavors for: Ancient Fruit, Banana, Blueberry, Cherry, Coconut, Cranberries, Crystal Fruit, Hot Pepper, Orange, Pineapple, Pomegranate, Qi Fruit, Spice Berry, Strawberry
+- Mint Chocolate
+- Chocolate-Vanilla
+- Chocolate Nut Butter
+- Chocolate Cookie and Cream
+- Chocolate Caramel
 # Fantasy Flavor Set:
 - Prismatic (Prismatic Shard, or Magic Rock Candy (makes 4))
 - Qi's (Qi Fruit)
