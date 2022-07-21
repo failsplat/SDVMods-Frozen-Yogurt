@@ -37,7 +37,7 @@
       "ProducerName": "Chocolate Swirl Machine",
       "InputIdentifier": "-79",
       "ExcludeIdentifiers": [
-        "454", // Ancient Fruit
+        //"454", // Ancient Fruit
         //"613", // Apple
         "91", // Banana
         //"410", // Blackberry
@@ -83,5 +83,16 @@
         "Green": 0,
         "Blue": 100,
       },
+  },
+  {
+      "ProducerName": "Chocolate Swirl Machine",
+      "InputIdentifier": "Banana Frozen Yogurt",
+      "InputStack": 1,
+      "FuelIdentifier": "Chocolate",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Chocolate Banana Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
   },
 ]
