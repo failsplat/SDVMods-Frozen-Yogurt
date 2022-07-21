@@ -57,47 +57,18 @@
   },
   {
       "ProducerName": "Chocolate Swirl Machine",
-      "InputIdentifier": "-79",
-      "ExcludeIdentifiers": [
-        //"454", // Ancient Fruit
-        //"613", // Apple
-        "91", // Banana
-        //"410", // Blackberry
-        "258", // Blueberry
-        //"90", // Cactus Fruit
-        "638", // Cherry
-        "88", // Coconut
-        "282", // Cranberries
-        "414", // Crystal Fruit
-        //"398", // Grape
-        "260", // Hot Pepper
-        //"834", // Mango
-        //"254", // Melon
-        "635", // Orange
-        //"636", // Peach
-        "832", // Pineapple
-        "637", // Pomegranate
-        "889", // Qi Fruit
-        //"296", // Salmonberry
-        "396", // Spice Berry
-        //"268", // Starfruit
-        "400", // Strawberry
-        //"Lemon",
-        //"Lime",
-        //"Kiwi",
-      ],
+      "InputIdentifier": "Fruit Frozen Yogurt",
       "InputStack": 1,
-      "FuelIdentifier": "Yogurt",
+      "FuelIdentifier": "Chocolate",
       "FuelStack": 1,
-      "AdditionalFuel" : {"Chocolate":1},
       "MinutesUntilReady": 120,
       "OutputIdentifier": "Chocolate Swirl Fruit Frozen Yogurt",
       "OutputName": "Chocolate-{inputName} Frozen Yogurt",
       "OutputTranslationKey": "ChocoSwirlFroyo.ChocoFruitFroyo",
       "OutputStack": 1,
       "InputPriceBased": true,
-      "OutputPriceIncrement": 625,
-      "OutputPriceMultiplier": 1.75,
+      "OutputPriceIncrement": 500,
+      "OutputPriceMultiplier": 1.00,
       "Sounds": ["Ship"],
       "OutputColorConfig": {
         "Type": "ObjectDyeColor",
@@ -105,6 +76,7 @@
         "Green": 0,
         "Blue": 100,
       },
+      "KeepInputParentIndex": true,
   },
   {
       "ProducerName": "Chocolate Swirl Machine",
