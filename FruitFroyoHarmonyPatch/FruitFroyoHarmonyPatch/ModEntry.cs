@@ -123,10 +123,18 @@ namespace FruitFroyo
                                 //Monitor.Log("Held Object Parent Name:" + heldObjectParent.DisplayName, LogLevel.Debug);
                                 if (FruitFroyoSpecificFruits.ContainsKey(heldObjectParent.Name)) // Replacement of Generic Fruit Froyo or Chocolate-Swirl Fruit Froyo with a specific variety
                                 {
-                                    __instance.heldObject.Value = new StardewValley.Object(
-                                        parentSheetIndex:jsonAssets.GetObjectId(FruitFroyoSpecificFruits[heldObjectParent.Name]), 
-                                        initialStack:1
-                                        );
+                                    int replacementFroyoIndex = jsonAssets.GetObjectId(FruitFroyoSpecificFruits[heldObjectParent.Name]);
+                                    if (replacementFroyoIndex != -1)
+                                    {
+                                        __instance.heldObject.Value = new StardewValley.Object(
+                                            parentSheetIndex: replacementFroyoIndex,
+                                            initialStack: 1
+                                            );
+                                    } else
+                                    {
+                                        Monitor.Log($"Froyo Replacement failed to find item name: "+ FruitFroyoSpecificFruits[heldObjectParent.Name], LogLevel.Error);
+                                    }
+
                                 }
                                 else if (false) 
                                 {
