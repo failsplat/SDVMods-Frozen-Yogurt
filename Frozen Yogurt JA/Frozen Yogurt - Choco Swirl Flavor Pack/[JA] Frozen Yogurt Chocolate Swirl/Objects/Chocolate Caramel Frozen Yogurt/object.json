@@ -1,0 +1,55 @@
+{
+    "Name": "Chocolate Caramel Frozen Yogurt",
+    "Description": "Overwhelmingly rich and sweet.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 950,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "EnableWithMod":"ppja.evenmorerecipes",
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_gold",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Chocolate Caramel Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "Overwhelmingly rich and sweet.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}

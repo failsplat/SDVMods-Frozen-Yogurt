@@ -2,6 +2,17 @@
   // Choco Swirl Flavors
   {
       "ProducerName": "Chocolate Swirl Machine",
+      "InputIdentifier": "Caramel Frozen Yogurt",
+      "InputStack": 1,
+      "FuelIdentifier": "Chocolate",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Chocolate Caramel Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
+  {
+      "ProducerName": "Chocolate Swirl Machine",
       "InputIdentifier": "Coffee Frozen Yogurt",
       "InputStack": 1,
       "FuelIdentifier": "Chocolate",
