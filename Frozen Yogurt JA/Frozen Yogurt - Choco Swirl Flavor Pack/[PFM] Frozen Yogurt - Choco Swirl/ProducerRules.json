@@ -106,4 +106,15 @@
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
+  {
+      "ProducerName": "Chocolate Swirl Machine",
+      "InputIdentifier": "Blueberry Frozen Yogurt",
+      "InputStack": 1,
+      "FuelIdentifier": "Chocolate",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Chocolate Blueberry Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
 ]
