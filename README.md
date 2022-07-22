@@ -41,7 +41,7 @@ Implemented:
 - Chocolate Hazelnut
 
 Planned:
-- Chocolate Flavors for: Banana, Blueberry, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Qi Fruit, Spice Berry, Strawberry
+- Chocolate Flavors for: Banana, Blueberry, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Strawberry
 - Mint Chocolate
 - Chocolate-Vanilla
 - Chocolate Nut Butter
