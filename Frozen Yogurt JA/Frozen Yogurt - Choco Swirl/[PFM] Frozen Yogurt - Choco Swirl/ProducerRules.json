@@ -228,6 +228,17 @@
       "OutputStack": 1,
       "Sounds": ["Ship"],
   },
+  {
+      "ProducerName": "Chocolate Swirl Machine",
+      "InputIdentifier": "Raspberry Frozen Yogurt",
+      "InputStack": 1,
+      "FuelIdentifier": "Chocolate",
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Chocolate Raspberry Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
   // Fruit/Chocolate Combinations - using special fruit froyo flavors
   // These require the Harmony patch to fix things
   
