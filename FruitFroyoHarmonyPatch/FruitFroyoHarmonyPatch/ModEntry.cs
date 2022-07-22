@@ -52,7 +52,10 @@ namespace FruitFroyo
     {
         private static IMonitor Monitor;
         private static IJsonAssetsApi jsonAssets;
-        private static readonly System.Collections.Generic.Dictionary<String, String> FruitFroyoSpecificFruits = new() {
+
+        // For converting generic fruit froyo into special flavors
+        // Key: Name of Preserved Item, Value: Name of Special Flavor
+        private static readonly System.Collections.Generic.Dictionary<String, String> SpecialFruitFroyo = new() {
             { "Ancient Fruit","Ancient Fruit Frozen Yogurt" },
             { "Apple", "Apple Frozen Yogurt" },
             { "Banana", "Banana Frozen Yogurt" },
@@ -80,7 +83,69 @@ namespace FruitFroyo
             { "Lime", "Lime Frozen Yogurt" },
             { "Kiwi", "Kiwi Frozen Yogurt" },
         };
-        private static readonly System.Collections.Generic.Dictionary<String, String> ChocoFruitFroyoSpecificFruits = new() { };
+        // For converting generic chocolate fruit froyo into special flavors
+        // Key: Name of Preserved Item, Value: Name of Special Flavor
+        private static readonly System.Collections.Generic.Dictionary<String, String> SpecialChocoFruitFroyo = new() {
+            { "Banana", "Chocolate Banana Frozen Yogurt" },
+            { "Blueberry", "Chocolate Blueberry Frozen Yogurt" },
+            { "Cherry", "Chocolate Cherry Frozen Yogurt" },
+            { "Coconut", "Chocolate Coconut Frozen Yogurt" },
+            { "Hot Pepper", "Chili Chocolate Frozen Yogurt" },
+            { "Orange", "Chocolate Orange Frozen Yogurt" },
+            { "Pineapple", "Chocolate Pineapple Frozen Yogurt" },
+            { "Pomegranate", "Chocolate Pomegranate Frozen Yogurt" },
+            { "Strawberry", "Chocolate Strawberry Frozen Yogurt" },
+        };
+
+        // For special flavors to generic chocolate fruit swirl flavors
+        // The preserved item is input as the preserved item, then is converted by this patch to the actual flavor
+        // Key: Name of Special Flavor, Key: Name of Replacement Fruit
+        private static readonly System.Collections.Generic.Dictionary<String, String> GenericChocoFruitFroyo = new() {
+            { "Ancient Fruit Frozen Yogurt" , "Ancient Fruit"},
+            { "Apple Frozen Yogurt", "Apple" },
+            { "Blackberry Frozen Yogurt", "Blackberry" },
+            { "Cactus Fruit Frozen Yogurt", "Cactus Fruit" },
+            { "Cranberry Frozen Yogurt", "Cranberries" },
+            { "Crystal Fruit Frozen Yogurt", "Crystal Fruit" },
+            { "Grape Frozen Yogurt", "Grape" },
+            { "Mango Frozen Yogurt", "Mango" },
+            { "Pink Melon Frozen Yogurt", "Melon" },
+            { "Peach Frozen Yogurt", "Peach" },
+            { "Qi's Frozen Yogurt", "Qi Fruit"},
+            { "Salmonberry Frozen Yogurt", "Salmonberry" },
+            { "Spice Berry Frozen Yogurt", "Spice Berry" },
+            { "Starfruit Frozen Yogurt", "Starfruit" },
+            { "Lemon Frozen Yogurt", "Lemon" },
+            { "Lime Frozen Yogurt", "Lime" },
+            { "Kiwi Frozen Yogurt", "Kiwi" },
+        };
+
+        private static readonly System.Collections.Generic.Dictionary<String, int> VanillaFruitIDLookup = new()
+        {
+            { "Ancient Fruit", 454 },
+            { "Apple", 613 },
+            { "Banana", 91 },
+            { "Blackberry", 410 },
+            { "Blueberry", 258 },
+            { "Cactus Fruit", 90 },
+            { "Cherry", 638 },
+            { "Coconut", 88 },
+            { "Cranberries", 282 },
+            { "Crystal Fruit", 414 },
+            { "Grape", 398 },
+            { "Hot Pepper", 260 },
+            { "Mango", 834 },
+            { "Melon", 254 },
+            { "Orange", 635 },
+            { "Peach", 636 },
+            { "Pineapple", 832 },
+            { "Pomegranate", 637 },
+            { "Qi Fruit", 889 },
+            { "Salmonberry", 296 },
+            { "Spice Berry", 396 },
+            { "Starfruit", 268 },
+            { "Strawberry", 400 },
+        };
 
         public ObjectPatches(IMonitor monitorIn, IJsonAssetsApi jsonAssetsIn)
         {
@@ -113,7 +178,7 @@ namespace FruitFroyo
                     {
                         // Check Held Object is Generic Flavor Froyo
                         StardewValley.Object heldObjectBase = new StardewValley.Object(parentSheetIndex: heldObject.ParentSheetIndex, initialStack: 1);
-                        if (heldObjectBase.Name == "Fruit Frozen Yogurt")
+                        if (heldObjectBase.Name == "Fruit Frozen Yogurt" || heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt")
                         {
                             //Monitor.Log("Fruit Froyo!", LogLevel.Debug);
                             int heldObjectPPSI = heldObject.preservedParentSheetIndex.Get();
@@ -121,26 +186,59 @@ namespace FruitFroyo
                             {
                                 StardewValley.Object heldObjectParent = new StardewValley.Object(parentSheetIndex: heldObjectPPSI, initialStack: 1);
                                 //Monitor.Log("Held Object Parent Name:" + heldObjectParent.DisplayName, LogLevel.Debug);
-                                if (FruitFroyoSpecificFruits.ContainsKey(heldObjectParent.Name)) // Replacement of Generic Fruit Froyo or Chocolate-Swirl Fruit Froyo with a specific variety
+                                bool needsRecolor = true;
+                                if (
+                                    heldObjectBase.Name == "Fruit Frozen Yogurt"
+                                    && SpecialFruitFroyo.ContainsKey(heldObjectParent.Name)
+                                    ) // Replacement of Generic Fruit Froyo or Chocolate-Swirl Fruit Froyo with a specific variety
                                 {
-                                    int replacementFroyoIndex = jsonAssets.GetObjectId(FruitFroyoSpecificFruits[heldObjectParent.Name]);
+                                    int replacementFroyoIndex = jsonAssets.GetObjectId(SpecialFruitFroyo[heldObjectParent.Name]);
                                     if (replacementFroyoIndex != -1)
                                     {
                                         __instance.heldObject.Value = new StardewValley.Object(
                                             parentSheetIndex: replacementFroyoIndex,
                                             initialStack: 1
                                             );
-                                    } else
+                                        needsRecolor = false;
+                                    }
+                                    else
                                     {
-                                        Monitor.Log($"Froyo Replacement failed to find item name: "+ FruitFroyoSpecificFruits[heldObjectParent.Name], LogLevel.Error);
+                                        Monitor.Log($"Froyo Replacement failed to find item name: " + SpecialFruitFroyo[heldObjectParent.Name], LogLevel.Error);
                                     }
 
                                 }
-                                else if (false) 
+                                else if (
+                                    heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt"
+                                    && SpecialChocoFruitFroyo.ContainsKey(heldObjectParent.Name)
+                                    ) // Replacement of Generic Chocolate-Fruit Swirl Froyo with special flavors
                                 {
+                                    int replacementFroyoIndex = jsonAssets.GetObjectId(SpecialChocoFruitFroyo[heldObjectParent.Name]);
+                                    __instance.heldObject.Value = new StardewValley.Object(
+                                            parentSheetIndex: replacementFroyoIndex,
+                                            initialStack: 1
+                                            );
+                                    needsRecolor = false;
+                                }
+                                else if (
+                                    heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt"
+                                    && GenericChocoFruitFroyo.ContainsKey(heldObjectParent.Name)
+                                    ) // Replacement of special fruit froyo with a fruit, in a generic choco-fruit froyo
+                                {
+                                    string replacementPreservedItem = GenericChocoFruitFroyo[heldObjectParent.Name];
+                                    int replacementPPSI;
+                                    if (VanillaFruitIDLookup.ContainsKey(replacementPreservedItem))
+                                    {
+                                        replacementPPSI = VanillaFruitIDLookup[replacementPreservedItem];
+                                    } 
+                                    else
+                                    {
+                                        replacementPPSI = jsonAssets.GetObjectId(replacementPreservedItem);
+                                    }
+                                    __instance.heldObject.Value.preservedParentSheetIndex.Value = replacementPPSI;
 
                                 }
-                                else // Otherwise, recolor the generic Fruit Froyo
+
+                                if (needsRecolor) // Recolor generic fruit froyo/choco-fruit froyo
                                 {
                                     foreach (string contextTag in heldObjectParent.GetContextTagList())
                                     {
