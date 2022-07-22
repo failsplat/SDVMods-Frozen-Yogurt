@@ -1,0 +1,55 @@
+{
+    "Name": "Mint Chocolate Frozen Yogurt",
+    "Description": "Mint frozen yogurt, with a swirl of chocolate instead of the usual chocolate chips.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 800,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "EnableWithMod": "ppja.fruitsandveggies",
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_light_green",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Mint Chocolate Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "Mint frozen yogurt, with a swirl of chocolate instead of the usual chocolate chips.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
