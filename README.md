@@ -12,9 +12,9 @@ Adds a Frozen Yogurt Machine to produce a variety of froyo flavors from Artisan 
 ## Contents
 New machines: 
 Frozen Yogurt Machine! Converts Artisan Valley yogurt into frozen treats!
-Fruit Froyo Swirler - Combines fruit flavors!
 Chocolate Swirl Machine - Adds a chocolate swirl to frozen desserts! (Planned: standalone version including chocolate-swirl ice creams)
 # Main Flavors:
+All recipes have a Yogurt item, unless otherwise stated.
 - Plain Frozen Yogurt (just Yogurt)
 - Specific Fruit flavors for: Most base game fruits, Lemon, Lime, Kiwi
 - General Fruit Frozen Yogurt (any other Fruit + Yogurt, or any Fruit Yogurt)
@@ -32,14 +32,13 @@ Chocolate Swirl Machine - Adds a chocolate swirl to frozen desserts! (Planned: s
 - Caramel (from PPJA Even More Recipes)
 - Ginger
 - Taro
-# Fruit Swirl Flavors:
 # Chocolate Swirl Flavors:
 Most recipes take in 1 basic froyo flavor from the "Main Flavors", adding chocolate
-Implemented:
 - Mocha (Coffee)
 - Double Chocolate (Chocolate)
 - Chocolate Hazelnut
 - Chocolate Flavors for: Banana, Blueberry, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Strawberry
+- Chocolate Fruit Swirl (other fruit)
 - Mint Chocolate
 - Fudge Royal
 - Chocolate Nut Butter
@@ -48,7 +47,6 @@ Implemented:
 # Fantasy Flavor Set:
 - Prismatic (Prismatic Shard, or Magic Rock Candy (makes 4))
 - Qi's (Qi Fruit)
-All recipes have a Yogurt item, unless otherwise stated.
 ## Install
 1. [Install the latest version of SMAPI](https://smapi.io/).
 2. Download this mod folder.
