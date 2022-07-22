@@ -1,6 +1,6 @@
 {
     "Name": "Chocolate Swirl Machine",
-    "Description": "Adds a swirl of chocolate to frozen yogurt.",
+    "Description": "Adds a swirl of chocolate flavor to frozen yogurt.",
     "Price": 1,
     "ProvidesLight": false, 
     "CanPurchase": false,
@@ -46,7 +46,7 @@
         },
         "DescriptionLocalization": //Used for localization. 
         { 
-            "default": "Adds a swirl of chocolate to frozen yogurt.",
+            "default": "Adds a swirl of chocolate flavor to frozen yogurt.",
             "es": "", //Spansih
             "ko": "", //Korean
             "de": "", //German
