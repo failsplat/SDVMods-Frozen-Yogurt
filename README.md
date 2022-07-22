@@ -39,8 +39,6 @@ Implemented:
 - Mocha (Coffee)
 - Double Chocolate (Chocolate)
 - Chocolate Hazelnut
-
-Planned:
 - Chocolate Flavors for: Banana, Blueberry, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Strawberry
 - Mint Chocolate
 - Chocolate-Vanilla
