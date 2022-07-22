@@ -41,7 +41,7 @@ Implemented:
 - Chocolate Hazelnut
 - Chocolate Flavors for: Banana, Blueberry, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Strawberry
 - Mint Chocolate
-- Chocolate-Vanilla
+- Fudge Royal
 - Chocolate Nut Butter
 - Chocolate Cookie and Cream
 - Chocolate Caramel

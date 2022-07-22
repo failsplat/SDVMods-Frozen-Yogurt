@@ -1,6 +1,6 @@
 {
-    "Name": "Chocolate-Vanilla Frozen Yogurt",
-    "Description": "Vanilla frozen yogurt with a chocolate swirl. A delicious contrast of flavors and colors.",
+    "Name": "Fudge Royal Frozen Yogurt",
+    "Description": "Vanilla frozen yogurt with a chocolate swirl. A delicious and elegant contrast of flavors and colors.",
     "Category": "ArtisanGoods",
     "Edibility": 15,
     "Price": 850,
@@ -24,7 +24,7 @@
     },
     "NameLocalization":
     {
-        "default":"Chocolate-Vanilla Frozen Yogurt",
+        "default":"Fudge Royal Frozen Yogurt",
         //"es": "",
         //"ko": "",
         //"de": "",
@@ -39,7 +39,7 @@
     },
     "DescriptionLocalization":
     {
-        "default": "Vanilla frozen yogurt with a chocolate swirl. A delicious contrast of flavors and colors.",
+        "default": "Vanilla frozen yogurt with a chocolate swirl. A delicious and elegant contrast of flavors and colors.",
         //"es": "",
         //"ko": "",
         //"de": "",
