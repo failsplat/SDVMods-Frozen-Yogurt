@@ -15,6 +15,7 @@ New main flavors:
  - Taro
  - Coffee
  - Hazelnut
+ - (Special Fruit) Raspberry
 New machine: Chocolate Swirl Machine
 New chocolate-swirl flavors:
  - Double Chocolate

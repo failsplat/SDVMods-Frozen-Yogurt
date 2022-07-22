@@ -16,7 +16,7 @@ Chocolate Swirl Machine - Adds a chocolate swirl to frozen desserts! (Planned: s
 # Main Flavors:
 All recipes have a Yogurt item, unless otherwise stated.
 - Plain Frozen Yogurt (just Yogurt)
-- Specific Fruit flavors for: Most base game fruits, Lemon, Lime, Kiwi
+- Specific Fruit flavors for: Most base game fruits, Lemon, Lime, Kiwi, Raspberry
 - General Fruit Frozen Yogurt (any other Fruit + Yogurt, or any Fruit Yogurt)
 - Coffee
 - Green Tea
