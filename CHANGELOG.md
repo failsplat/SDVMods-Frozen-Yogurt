@@ -11,6 +11,7 @@ New flavors:
  - (Fantasy Flavors) Qi's Frozen Yogurt
 Tweaks to Harmony patch
 ### 1.6.0
+Fix to Kiwi flavor
 New main flavors:
  - Taro
  - Coffee

@@ -13,11 +13,10 @@ Adds a Frozen Yogurt Machine to produce a variety of froyo flavors from Artisan 
 New machines: 
 Frozen Yogurt Machine! Converts Artisan Valley yogurt into frozen treats!
 Chocolate Swirl Machine - Adds a chocolate swirl to frozen desserts! (Planned: standalone version including chocolate-swirl ice creams)
-All recipes have a Yogurt item, unless otherwise stated.
 # Main Flavors:
 All recipes have a Yogurt item, unless otherwise stated.
 - Plain Frozen Yogurt (just Yogurt)
-- Specific Fruit flavors for: Most base game fruits, Lemon, Lime, Kiwi
+- Specific Fruit flavors for: Most base game fruits, Lemon, Lime, Kiwi, Raspberry
 - General Fruit Frozen Yogurt (any other Fruit + Yogurt, or any Fruit Yogurt)
 - Coffee
 - Green Tea
@@ -38,13 +37,14 @@ Most recipes take in 1 basic froyo flavor from the "Main Flavors", adding chocol
 - Mocha (Coffee)
 - Double Chocolate (Chocolate)
 - Chocolate Hazelnut
-- Chocolate Flavors for: Banana, Blueberry, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Strawberry
+- Chocolate Flavors for: Banana, Blueberry, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Strawberry, Raspberry
 - Chocolate Fruit Swirl (other fruit)
 - Mint Chocolate
-- Fudge Royal
+- Fudge Royal (Vanilla)
 - Chocolate Nut Butter
 - Chocolate Cookie and Cream
 - Chocolate Caramel
+- Neapolitan (Fudge Royal, uses Frozen Yogurt Machine)
 # Fantasy Flavor Set:
 - Prismatic (Prismatic Shard, or Magic Rock Candy (makes 4))
 - Qi's (Qi Fruit)
