@@ -82,6 +82,7 @@ namespace FruitFroyo
             { "Lemon", "Lemon Frozen Yogurt" },
             { "Lime", "Lime Frozen Yogurt" },
             { "Kiwi", "Kiwi Frozen Yogurt" },
+            { "Raspberry", "Raspberry Frozen Yogurt"}
         };
         // For converting generic chocolate fruit froyo into special flavors
         // Key: Name of Preserved Item, Value: Name of Special Flavor
@@ -95,6 +96,7 @@ namespace FruitFroyo
             { "Pineapple", "Chocolate Pineapple Frozen Yogurt" },
             { "Pomegranate", "Chocolate Pomegranate Frozen Yogurt" },
             { "Strawberry", "Chocolate Strawberry Frozen Yogurt" },
+            { "Raspberry", "Chocolate Raspberry Frozen Yogurt" },
         };
 
         // For special flavors to generic chocolate fruit swirl flavors

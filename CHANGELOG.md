@@ -23,7 +23,7 @@ New chocolate-swirl flavors:
  - Nut Butter
  - Fudge Royal
  - Mint
- - (Special Chocolate-Fruit) Banana, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Strawberry
+ - (Special Chocolate-Fruit) Banana, Cherry, Coconut, Hot Pepper, Orange, Pineapple, Pomegranate, Strawberry, Raspberry
 Moved to chocolate-swirl flavors:
  - Chocolate Hazelnut
  - Mocha

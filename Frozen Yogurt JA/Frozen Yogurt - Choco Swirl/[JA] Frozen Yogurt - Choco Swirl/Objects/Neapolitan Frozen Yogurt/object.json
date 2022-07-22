@@ -1,0 +1,55 @@
+{
+    "Name": "Neapolitan Frozen Yogurt",
+    "Description": "A classic combination of vanilla, chocolate and strawberry flavors.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 1200,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "EnableWithMod": "ppja.moretrees",
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_white",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Neapolitan Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "A classic combination of vanilla, chocolate and strawberry flavors.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
