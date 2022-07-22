@@ -94,6 +94,17 @@
       "Sounds": ["Ship"],
       "KeepInputParentIndex": true,
   },
+  {
+      "ProducerName": "Frozen Yogurt Machine",
+      "InputIdentifier": "Fudge Royal Frozen Yogurt",
+      "InputStack": 1,
+      "FuelIdentifier": "400", // Strawberry
+      "FuelStack": 1,
+      "MinutesUntilReady": 120,
+      "OutputIdentifier": "Neapolitan Frozen Yogurt",
+      "OutputStack": 1,
+      "Sounds": ["Ship"],
+  },
   // Fruit/Chocolate Combinations
   {
       "ProducerName": "Chocolate Swirl Machine",
