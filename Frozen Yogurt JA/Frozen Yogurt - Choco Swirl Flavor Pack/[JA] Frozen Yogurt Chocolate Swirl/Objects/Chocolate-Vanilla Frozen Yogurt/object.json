@@ -1,0 +1,55 @@
+{
+    "Name": "Chocolate-Vanilla Frozen Yogurt",
+    "Description": "Vanilla frozen yogurt with a chocolate swirl. A delicious contrast of flavors and colors.",
+    "Category": "ArtisanGoods",
+    "Edibility": 15,
+    "Price": 850,
+    "IsColored": false,
+    "EdibleIsDrink": false,
+    "EdibleBuffs": null,
+    "EnableWithMod": "ppja.moretrees",
+    "Recipe": null,
+    "ContextTags":
+    [
+      "universal_like",
+      "color_white",
+    ],
+    "GiftTastes":
+    {
+        "Love": [],
+        "Like": [],
+        "Neutral": [],
+        "Dislike": [],
+        "Hate": [],
+    },
+    "NameLocalization":
+    {
+        "default":"Chocolate-Vanilla Frozen Yogurt",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        //"it": "",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+    "DescriptionLocalization":
+    {
+        "default": "Vanilla frozen yogurt with a chocolate swirl. A delicious contrast of flavors and colors.",
+        //"es": "",
+        //"ko": "",
+        //"de": "",
+        //"fr": "",
+        //"hu": "",
+        // "it":"",
+        //"ja": "",
+        //"pt": "",
+        //"ru": "",
+        //"tr": "",
+        //"zh": "",
+    },
+}
