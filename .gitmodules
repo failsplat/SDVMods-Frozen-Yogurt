@@ -1,0 +1,6 @@
+[submodule "AtraShared"]
+	path = AtraShared
+	url = https://github.com/atravita-mods/AtraShared
+[submodule "AtraBase"]
+	path = AtraBase
+	url = https://github.com/atravita-mods/AtraBase

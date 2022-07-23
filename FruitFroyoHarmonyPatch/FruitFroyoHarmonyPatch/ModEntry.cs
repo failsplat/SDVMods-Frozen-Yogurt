@@ -1,10 +1,15 @@
-﻿using System;
+﻿#define TRANSPILERS
+
+using System;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
 using HarmonyLib;
+using AtraShared.Utils.Extensions;
+using AtraShared.Utils.HarmonyHelper;
+
 
 namespace FruitFroyo
 {
@@ -40,6 +45,29 @@ namespace FruitFroyo
                 original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.performObjectDropInAction)),
                 postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.performObjectDropInAction_postfix))
                 );
+
+            try
+            {
+                if (Helper.ModRegistry.IsLoaded("Pathoschild.Automate"))
+                {
+                    Type machine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.GenericObjectMachine`1");
+                    Type storage = AccessTools.TypeByName("Pathoschild.Stardew.Automate.IStorage");
+                    Type recipe = AccessTools.TypeByName("Pathoschild.Stardew.Automate.IRecipe");
+
+                    harmony.Patch(
+                        original: machine.GetMethod("GenericPullRecipe", new[] { storage, recipe.MakeArrayType(), typeof(Item).MakeByRefType() }),
+                        transpiler: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.GenericPullRecipeTranspiler))
+                        );
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Monitor.Log($"Could not get Automate types:\n{ex}", LogLevel.Error);
+            }
+
+
+
         }
     }
 
@@ -52,6 +80,8 @@ namespace FruitFroyo
     {
         private static IMonitor Monitor;
         private static IJsonAssetsApi jsonAssets;
+        private static Type storageType;
+        private static Type recipeType;
 
         // For converting generic fruit froyo into special flavors
         // Key: Name of Preserved Item, Value: Name of Special Flavor
@@ -310,6 +340,51 @@ namespace FruitFroyo
             }
         }
 
+        public static System.Collections.IEnumerable<CodeInstruction>? GenericPullRecipeTranspiler(
+            System.Collections.IEnumerable<CodeInstruction> instructions, ILGenerator gen, MethodBase original
+            )
+        {
+            try
+            {
+                AtraShared.Utils.HarmonyHelper.ILHelper helper = new(original, instructions, ModEntry.Monitor, gen);
+
+                helper.FindNext(new CodeInstructionWrapper[]
+                { // These instructions will get a reference to the machine.
+                new(OpCodes.Ldarg_0),
+                new(OpCodes.Call),
+                new(OpCodes.Box),
+                });
+
+                // Copy them for later.
+                CodeInstruction[]? copy = helper.Codes.GetRange(helper.Pointer, 3).Select((a) => a.Clone()).ToArray();
+
+                helper.FindNext(new CodeInstructionWrapper[]
+                {
+                new(OpCodes.Ldc_I4_1),
+                new(OpCodes.Ret),
+                })
+                .GetLabels(out IList<Label>? labels)
+                .Insert(copy, withLabels: labels)
+                .Insert(new CodeInstruction[]
+                {
+                new(OpCodes.Ldfld, typeof(SObject).InstanceFieldNamed(nameof(SObject.heldObject))),
+                new(OpCodes.Dup),
+                new(OpCodes.Callvirt, typeof(NetFieldBase<SObject, NetRef<SObject>>).InstancePropertyNamed("Value").GetGetMethod()),
+                new(OpCodes.Ldarg_3),
+                new(OpCodes.Ldind_Ref),
+                new(OpCodes.Call, typeof(AutomateTranspiler).StaticMethodNamed(nameof(MakeOrganic))),
+                new(OpCodes.Callvirt, typeof(NetFieldBase<SObject, NetRef<SObject>>).InstancePropertyNamed("Value").GetSetMethod()),
+                });
+
+                // helper.Print();
+                return helper.Render();
+            }
+            catch (Exception ex)
+            {
+                ModEntry.ModMonitor.Log($"Mod crashed while transpiling Automate:\n\n{ex}", LogLevel.Error);
+            }
+            return null;
+        }
         private static byte ChannelSigmoid(byte r, int midpoint=128, double flatten=16, double bleachWeight=0.25)
         {
             double res = 255 / (
