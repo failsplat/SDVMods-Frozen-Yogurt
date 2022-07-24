@@ -15,19 +15,25 @@ namespace FruitFroyo
         private ObjectPatches objectPatches;
         private IJsonAssetsApi jsonAssets;
 
+        private string modIDJsonAssets = "spacechase0.JsonAssets";
+        private string modIDAutomate = "Pathoschild.Automate";
+
         public override void Entry(IModHelper helper)
         {
             helper.Events.GameLoop.GameLaunched += this.OnGameLaunched;
+            if (helper.ModRegistry.IsLoaded(modIDAutomate))
+            {
+                helper.Events.World.ChestInventoryChanged += this.ChestInventoryChanged;
+            }
         }
 
 
         private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
         {
             Harmony harmony = new Harmony(this.ModManifest.UniqueID);
-            this.jsonAssets = Helper.ModRegistry.GetApi<IJsonAssetsApi>("spacechase0.JsonAssets");
+            this.jsonAssets = Helper.ModRegistry.GetApi<IJsonAssetsApi>(modIDJsonAssets);
             this.objectPatches = new ObjectPatches(this.Monitor, this.jsonAssets);
-            this.ApplyPatches(harmony);
-            
+            this.ApplyPatches(harmony); 
         }
 
         private void ApplyPatches(Harmony harmony)
@@ -40,6 +46,25 @@ namespace FruitFroyo
                 original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.performObjectDropInAction)),
                 postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.performObjectDropInAction_postfix))
                 );
+        }
+
+        private void ChestInventoryChanged(object? sender, ChestInventoryChangedEventArgs e)
+        {
+            try 
+            {
+                StardewValley.Object chest = e.Chest;
+                StardewValley.GameLocation location = e.Location;
+
+                object machineManager = AccessTools.Field(AccessTools.TypeByName("Pathoschild.Stardew.Automate.ModEntry"), "MachineManager");
+                IReflectedMethod g = Helper.Reflection.GetMethod(machineManager, "GetForApi");
+                var g2 = g.MethodInfo.Invoke(machineManager, new object[] { location });
+
+            }
+            catch (Exception ex)
+            {
+                Monitor.Log($"Failed in {nameof(ChestInventoryChanged)}:\n{ex}", LogLevel.Error);
+            }
+
         }
     }
 
