@@ -47,17 +47,12 @@ namespace FruitFroyo
                 {
                     Monitor.Log("This mod patches Automate. If you notice issues with Automate, make sure it happens without this mod before reporting it to the Automate page.", LogLevel.Debug);
 
-                    // I don't see a use in using MachineWrapper because it's also internal I need to check for the type of the machine anyway which would be way too much reflection at runtime
-                    var froyoMachine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.Machines.Objects.FrozenYogurtMachine");
-                    var chocoSwirlMachine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.Machines.Objects.ChocolateSwirlMachine");
+                    Type machine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.MachineWrapper") ?? throw new Exception("Automate machine");
 
                     harmony.Patch(
-                       original: AccessTools.Method(froyoMachine, "GetOutput"),
-                       postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.PatchFroyoMachineOutput)));
-
-                    harmony.Patch(
-                       original: AccessTools.Method(froyoMachine, "GetOutput"),
-                       postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.PatchChocoSwirlMachineOutput)));
+                       original: AccessTools.Method(machine, "GetOutput"),
+                       postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.PatchFroyoMachineOutput))
+                       );
                 }
                 catch (Exception e)
                 {
@@ -214,11 +209,6 @@ namespace FruitFroyo
         }
 
         public static void PatchFroyoMachineOutput(ref StardewValley.Object __instance)
-        {
-            ApplyHeldItemChanges(__instance);
-        }
-
-        public static void PatchChocoSwirlMachineOutput(ref StardewValley.Object __instance)
         {
             ApplyHeldItemChanges(__instance);
         }
