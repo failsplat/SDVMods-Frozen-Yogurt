@@ -47,10 +47,12 @@ namespace FruitFroyo
                 {
                     Monitor.Log("This mod patches Automate. If you notice issues with Automate, make sure it happens without this mod before reporting it to the Automate page.", LogLevel.Debug);
 
-                    Type machine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.MachineWrapper") ?? throw new Exception("Automate machine");
+                    Type machine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.GenericObjectMachine`1")?.MakeGenericType(typeof(StardewValley.Object)) ?? throw new Exception("Automate machine");
+                    Type storage = AccessTools.TypeByName("Pathoschild.Stardew.Automate.IStorage") ?? throw new Exception("Automate IStorage");
+                    Type recipe = AccessTools.TypeByName("Pathoschild.Stardew.Automate.IRecipe") ?? throw new Exception("Automate IRecipe");
 
                     harmony.Patch(
-                       original: AccessTools.Method(machine, "GetOutput"),
+                       original: machine.GetMethod("GenericPullRecipe", new[] { storage, recipe.MakeArrayType(), typeof(Item).MakeByRefType() }),
                        postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.PatchFroyoMachineOutput))
                        );
                 }
