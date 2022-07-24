@@ -40,6 +40,30 @@ namespace FruitFroyo
                 original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.performObjectDropInAction)),
                 postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.performObjectDropInAction_postfix))
                 );
+
+            if (Helper.ModRegistry.IsLoaded("Pathoschild.Automate"))
+            {
+                try
+                {
+                    Monitor.Log("This mod patches Automate. If you notice issues with Automate, make sure it happens without this mod before reporting it to the Automate page.", LogLevel.Debug);
+
+                    // I don't see a use in using MachineWrapper because it's also internal I need to check for the type of the machine anyway which would be way too much reflection at runtime
+                    var froyoMachine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.Machines.Objects.FrozenYogurtMachine");
+                    var chocoSwirlMachine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.Machines.Objects.ChocolateSwirlMachine");
+
+                    harmony.Patch(
+                       original: AccessTools.Method(froyoMachine, "GetOutput"),
+                       postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.PatchFroyoMachineOutput)));
+
+                    harmony.Patch(
+                       original: AccessTools.Method(froyoMachine, "GetOutput"),
+                       postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.PatchChocoSwirlMachineOutput)));
+                }
+                catch (Exception e)
+                {
+                    Monitor.Log($"Error while trying to patch Automate. Please report this to the mod page of {ModManifest.Name}, not Automate: {e}", LogLevel.Error);
+                }
+            }
         }
     }
 
@@ -187,6 +211,16 @@ namespace FruitFroyo
                 Monitor.Log($"Failed in {nameof(performObjectDropInAction_postfix)}:\n{ex}", LogLevel.Error);
                 //return true;
             }
+        }
+
+        public static void PatchFroyoMachineOutput(ref StardewValley.Object __instance)
+        {
+            ApplyHeldItemChanges(__instance);
+        }
+
+        public static void PatchChocoSwirlMachineOutput(ref StardewValley.Object __instance)
+        {
+            ApplyHeldItemChanges(__instance);
         }
 
         private static void ApplyHeldItemChanges(StardewValley.Object __instance)
