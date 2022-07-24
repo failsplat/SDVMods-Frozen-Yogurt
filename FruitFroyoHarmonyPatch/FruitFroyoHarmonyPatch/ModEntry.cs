@@ -178,128 +178,7 @@ namespace FruitFroyo
                     }
                     else
                     {
-                        // Check Held Object is Generic Flavor Froyo
-                        StardewValley.Object heldObjectBase = new StardewValley.Object(parentSheetIndex: heldObject.ParentSheetIndex, initialStack: 1);
-                        if (heldObjectBase.Name == "Fruit Frozen Yogurt" || heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt")
-                        {
-                            //Monitor.Log("Fruit Froyo!", LogLevel.Debug);
-                            int heldObjectPPSI = heldObject.preservedParentSheetIndex.Get();
-                            if (heldObjectPPSI != 0)
-                            {
-                                StardewValley.Object heldObjectParent = new StardewValley.Object(parentSheetIndex: heldObjectPPSI, initialStack: 1);
-                                //Monitor.Log("Held Object Parent Name:" + heldObjectParent.DisplayName, LogLevel.Debug);
-                                bool needsRecolor = true;
-                                if (
-                                    heldObjectBase.Name == "Fruit Frozen Yogurt"
-                                    && SpecialFruitFroyo.ContainsKey(heldObjectParent.Name)
-                                    ) // Replacement of Generic Fruit Froyo or Chocolate-Swirl Fruit Froyo with a specific variety
-                                {
-                                    int replacementFroyoIndex = jsonAssets.GetObjectId(SpecialFruitFroyo[heldObjectParent.Name]);
-                                    if (replacementFroyoIndex != -1)
-                                    {
-                                        __instance.heldObject.Value = new StardewValley.Object(
-                                            parentSheetIndex: replacementFroyoIndex,
-                                            initialStack: 1
-                                            );
-                                        needsRecolor = false;
-                                    }
-                                    else
-                                    {
-                                        Monitor.Log($"Froyo Replacement failed to find item name: " + SpecialFruitFroyo[heldObjectParent.Name], LogLevel.Error);
-                                    }
-
-                                }
-                                else if (
-                                    heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt"
-                                    && SpecialChocoFruitFroyo.ContainsKey(heldObjectParent.Name)
-                                    ) // Replacement of Generic Chocolate-Fruit Swirl Froyo with special flavors
-                                {
-                                    int replacementFroyoIndex = jsonAssets.GetObjectId(SpecialChocoFruitFroyo[heldObjectParent.Name]);
-                                    __instance.heldObject.Value = new StardewValley.Object(
-                                            parentSheetIndex: replacementFroyoIndex,
-                                            initialStack: 1
-                                            );
-                                    needsRecolor = false;
-                                }
-                                else if (
-                                    heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt"
-                                    && GenericChocoFruitFroyo.ContainsKey(heldObjectParent.Name)
-                                    ) // Replacement of special fruit froyo with a fruit, in a generic choco-fruit froyo
-                                {
-                                    string replacementPreservedItem = GenericChocoFruitFroyo[heldObjectParent.Name];
-                                    int replacementPPSI;
-                                    if (VanillaFruitIDLookup.ContainsKey(replacementPreservedItem))
-                                    {
-                                        replacementPPSI = VanillaFruitIDLookup[replacementPreservedItem];
-                                    } 
-                                    else
-                                    {
-                                        replacementPPSI = jsonAssets.GetObjectId(replacementPreservedItem);
-                                    }
-                                    __instance.heldObject.Value.preservedParentSheetIndex.Value = replacementPPSI;
-
-                                }
-
-                                if (needsRecolor) // Recolor generic fruit froyo/choco-fruit froyo
-                                {
-                                    foreach (string contextTag in heldObjectParent.GetContextTagList())
-                                    {
-                                        if (contextTag.StartsWith("color_"))
-                                        {
-                                            heldObject.GetContextTags().Add(contextTag);
-                                            Color parentColor = (Color)StardewValley.Menus.TailoringMenu.GetDyeColor(heldObjectParent);
-
-                                            // Color Adjustment
-                                            switch (contextTag)
-                                            {
-                                                case "color_white":
-                                                case "color_sand":
-                                                    parentColor.R = 240;
-                                                    parentColor.G = 160;
-                                                    parentColor.B = 80;
-                                                    break;
-                                                case "color_yellow":
-                                                case "color_light_yellow":
-                                                case "color_dark_yellow":
-                                                    parentColor.R = 255;
-                                                    parentColor.G = 190;
-                                                    parentColor.B = 0;
-                                                    break;
-                                                case "color_pink":
-                                                case "color_light_pink":
-                                                case "color_salmon":
-                                                    parentColor = Color.HotPink;
-                                                    break;
-                                                case "color_black":
-                                                    parentColor = Color.DarkViolet;
-                                                    break;
-                                                case "color_lime":
-                                                    parentColor.R = 150;
-                                                    parentColor.G = 220;
-                                                    parentColor.B = 50;
-                                                    break;
-                                                default:
-                                                    parentColor.R = ChannelSigmoid(parentColor.R);
-                                                    parentColor.G = ChannelSigmoid(parentColor.G);
-                                                    parentColor.B = ChannelSigmoid(parentColor.B);
-                                                    break;
-                                            }
-
-                                            StardewValley.Objects.ColoredObject asColoredObject = (StardewValley.Objects.ColoredObject)__instance.heldObject.Get();
-                                            asColoredObject.color.Set(parentColor);
-                                            heldObject.GetContextTags().Add(contextTag);
-                                            Monitor.Log("Recolored " + heldObject.DisplayName + " to:" + contextTag, LogLevel.Trace);
-                                            break;
-                                        }
-                                    }
-                                }
-                                
-
-                            }
-                        }
-
-
-                        
+                        ApplyHeldItemChanges(__instance);
                     }
                 } 
             }
@@ -307,6 +186,128 @@ namespace FruitFroyo
             {
                 Monitor.Log($"Failed in {nameof(performObjectDropInAction_postfix)}:\n{ex}", LogLevel.Error);
                 //return true;
+            }
+        }
+
+        private static void ApplyHeldItemChanges(StardewValley.Object __instance)
+        {
+            StardewValley.Object heldObject = __instance.heldObject.Get();
+            // Check Held Object is Generic Flavor Froyo
+            StardewValley.Object heldObjectBase = new StardewValley.Object(parentSheetIndex: heldObject.ParentSheetIndex, initialStack: 1);
+            if (heldObjectBase.Name == "Fruit Frozen Yogurt" || heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt")
+            {
+                //Monitor.Log("Fruit Froyo!", LogLevel.Debug);
+                int heldObjectPPSI = heldObject.preservedParentSheetIndex.Get();
+                if (heldObjectPPSI != 0)
+                {
+                    StardewValley.Object heldObjectParent = new StardewValley.Object(parentSheetIndex: heldObjectPPSI, initialStack: 1);
+                    //Monitor.Log("Held Object Parent Name:" + heldObjectParent.DisplayName, LogLevel.Debug);
+                    bool needsRecolor = true;
+                    if (
+                        heldObjectBase.Name == "Fruit Frozen Yogurt"
+                        && SpecialFruitFroyo.ContainsKey(heldObjectParent.Name)
+                        ) // Replacement of Generic Fruit Froyo or Chocolate-Swirl Fruit Froyo with a specific variety
+                    {
+                        int replacementFroyoIndex = jsonAssets.GetObjectId(SpecialFruitFroyo[heldObjectParent.Name]);
+                        if (replacementFroyoIndex != -1)
+                        {
+                            __instance.heldObject.Value = new StardewValley.Object(
+                                parentSheetIndex: replacementFroyoIndex,
+                                initialStack: 1
+                                );
+                            needsRecolor = false;
+                        }
+                        else
+                        {
+                            Monitor.Log($"Froyo Replacement failed to find item name: " + SpecialFruitFroyo[heldObjectParent.Name], LogLevel.Error);
+                        }
+
+                    }
+                    else if (
+                        heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt"
+                        && SpecialChocoFruitFroyo.ContainsKey(heldObjectParent.Name)
+                        ) // Replacement of Generic Chocolate-Fruit Swirl Froyo with special flavors
+                    {
+                        int replacementFroyoIndex = jsonAssets.GetObjectId(SpecialChocoFruitFroyo[heldObjectParent.Name]);
+                        __instance.heldObject.Value = new StardewValley.Object(
+                                parentSheetIndex: replacementFroyoIndex,
+                                initialStack: 1
+                                );
+                        needsRecolor = false;
+                    }
+                    else if (
+                        heldObjectBase.Name == "Chocolate Swirl Fruit Frozen Yogurt"
+                        && GenericChocoFruitFroyo.ContainsKey(heldObjectParent.Name)
+                        ) // Replacement of special fruit froyo with a fruit, in a generic choco-fruit froyo
+                    {
+                        string replacementPreservedItem = GenericChocoFruitFroyo[heldObjectParent.Name];
+                        int replacementPPSI;
+                        if (VanillaFruitIDLookup.ContainsKey(replacementPreservedItem))
+                        {
+                            replacementPPSI = VanillaFruitIDLookup[replacementPreservedItem];
+                        }
+                        else
+                        {
+                            replacementPPSI = jsonAssets.GetObjectId(replacementPreservedItem);
+                        }
+                        __instance.heldObject.Value.preservedParentSheetIndex.Value = replacementPPSI;
+
+                    }
+
+                    if (needsRecolor) // Recolor generic fruit froyo/choco-fruit froyo
+                    {
+                        foreach (string contextTag in heldObjectParent.GetContextTagList())
+                        {
+                            if (contextTag.StartsWith("color_"))
+                            {
+                                heldObject.GetContextTags().Add(contextTag);
+                                Color parentColor = (Color)StardewValley.Menus.TailoringMenu.GetDyeColor(heldObjectParent);
+
+                                // Color Adjustment
+                                switch (contextTag)
+                                {
+                                    case "color_white":
+                                    case "color_sand":
+                                        parentColor.R = 240;
+                                        parentColor.G = 160;
+                                        parentColor.B = 80;
+                                        break;
+                                    case "color_yellow":
+                                    case "color_light_yellow":
+                                    case "color_dark_yellow":
+                                        parentColor.R = 255;
+                                        parentColor.G = 190;
+                                        parentColor.B = 0;
+                                        break;
+                                    case "color_pink":
+                                    case "color_light_pink":
+                                    case "color_salmon":
+                                        parentColor = Color.HotPink;
+                                        break;
+                                    case "color_black":
+                                        parentColor = Color.DarkViolet;
+                                        break;
+                                    case "color_lime":
+                                        parentColor.R = 150;
+                                        parentColor.G = 220;
+                                        parentColor.B = 50;
+                                        break;
+                                    default:
+                                        parentColor.R = ChannelSigmoid(parentColor.R);
+                                        parentColor.G = ChannelSigmoid(parentColor.G);
+                                        parentColor.B = ChannelSigmoid(parentColor.B);
+                                        break;
+                                }
+
+                                StardewValley.Objects.ColoredObject asColoredObject = (StardewValley.Objects.ColoredObject)__instance.heldObject.Get();
+                                asColoredObject.color.Set(parentColor);
+                                heldObject.GetContextTags().Add(contextTag);
+                                Monitor.Log("Recolored " + heldObject.DisplayName + " to:" + contextTag, LogLevel.Trace);
+                                break;
+                            }
+                        }
+                    }
+                }
             }
         }
 
