@@ -208,6 +208,7 @@ namespace FruitFroyo
 
         public static void PatchFroyoMachineOutput(StardewValley.Object __instance, StardewValley.GameLocation environment)
         {
+            Monitor.Log("In Patch!", LogLevel.Debug);
             if (__instance.name != "Frozen Yogurt Machine" && __instance.name != "Chocolate Swirl Machine")
             {
                 return;
