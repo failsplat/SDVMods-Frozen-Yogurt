@@ -29,6 +29,8 @@ Moved to chocolate-swirl flavors:
  - Chocolate Hazelnut
  - Mocha
 Changes to Harmony patch to support new content
+### 1.6.1
+C# Mod now applies corrections to frozen yogurt items produced by Automated machines
 ### Future
  - (Fruit Mix)
  - (Further Fantasy Flavors)
