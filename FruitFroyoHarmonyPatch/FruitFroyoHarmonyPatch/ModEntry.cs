@@ -52,12 +52,26 @@ namespace FruitFroyo
         {
             try 
             {
-                StardewValley.Object chest = e.Chest;
                 StardewValley.GameLocation location = e.Location;
 
-                object machineManager = AccessTools.Field(AccessTools.TypeByName("Pathoschild.Stardew.Automate.ModEntry"), "MachineManager");
-                IReflectedMethod g = Helper.Reflection.GetMethod(machineManager, "GetForApi");
-                var g2 = g.MethodInfo.Invoke(machineManager, new object[] { location });
+                foreach (StardewValley.Object obj in location.netObjects.Values)
+                {
+                    if (obj.name != "Frozen Yogurt Machine" && obj.name != "Chocolate Swirl Machine")
+                    {
+                        continue;
+                    }
+                    // Check Held Object
+                    StardewValley.Object heldObject = obj.heldObject.Get();
+                    if (heldObject == null)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        //Monitor.Log("Applying Held Object Fix!", LogLevel.Debug);
+                        ObjectPatches.ApplyHeldItemChanges(obj);
+                    }
+                }
 
             }
             catch (Exception ex)
@@ -214,7 +228,7 @@ namespace FruitFroyo
             }
         }
 
-        private static void ApplyHeldItemChanges(StardewValley.Object __instance)
+        public static void ApplyHeldItemChanges(StardewValley.Object __instance)
         {
             try
             {
