@@ -45,18 +45,16 @@ namespace FruitFroyo
             {
                 try
                 {
-                    Monitor.Log("This mod patches Automate. If you notice issues with Automate, make sure it happens without this mod before reporting it to the Automate page.", LogLevel.Debug);
 
-                    Type machine = AccessTools.TypeByName("Pathoschild.Stardew.Automate.Framework.MachineWrapper") ?? throw new Exception("Automate machine");
 
                     harmony.Patch(
-                       original: AccessTools.Method(machine, "GetOutput"),
+                       original: AccessTools.Method(typeof(StardewValley.Object), nameof(StardewValley.Object.addWorkingAnimation)),
                        postfix: new HarmonyMethod(typeof(ObjectPatches), nameof(ObjectPatches.PatchFroyoMachineOutput))
                        );
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    Monitor.Log($"Error while trying to patch Automate. Please report this to the mod page of {ModManifest.Name}, not Automate: {e}", LogLevel.Error);
+                    Monitor.Log($"Failed in {nameof(ApplyPatches)}:\n{ex}", LogLevel.Error);
                 }
             }
         }
@@ -208,9 +206,22 @@ namespace FruitFroyo
             }
         }
 
-        public static void PatchFroyoMachineOutput(ref StardewValley.Object __instance)
+        public static void PatchFroyoMachineOutput(StardewValley.Object __instance, StardewValley.GameLocation environment)
         {
-            ApplyHeldItemChanges(__instance);
+            if (__instance.name != "Frozen Yogurt Machine" && __instance.name != "Chocolate Swirl Machine")
+            {
+                return;
+            }
+            StardewValley.Object heldObject = __instance.heldObject.Get();
+            if (heldObject == null)
+            {
+                //Monitor.Log("No Held Object", LogLevel.Debug);
+                return;
+            }
+            else
+            {
+                ApplyHeldItemChanges(__instance);
+            }
         }
 
         private static void ApplyHeldItemChanges(StardewValley.Object __instance)
