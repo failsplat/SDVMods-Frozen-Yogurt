@@ -210,7 +210,21 @@ namespace FruitFroyo
 
         public static void PatchFroyoMachineOutput(ref StardewValley.Object __instance)
         {
-            ApplyHeldItemChanges(__instance);
+            if (__instance.name != "Frozen Yogurt Machine" && __instance.name != "Chocolate Swirl Machine")
+            {
+                return;
+            }
+            // Check Held Object
+            StardewValley.Object heldObject = __instance.heldObject.Get();
+            if (heldObject == null)
+            {
+                //Monitor.Log("No Held Object", LogLevel.Debug);
+                return;
+            }
+            else
+            {
+                ApplyHeldItemChanges(__instance);
+            }
         }
 
         private static void ApplyHeldItemChanges(StardewValley.Object __instance)
