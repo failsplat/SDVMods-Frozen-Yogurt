@@ -9,6 +9,7 @@
     "EdibleBuffs": null,
     "EnableWithMod" : "ppja.fruitsandveggies",
     "Recipe": null,
+    "HideFromShippingCollection": true,
     "ContextTags":
     [
       "universal_like",

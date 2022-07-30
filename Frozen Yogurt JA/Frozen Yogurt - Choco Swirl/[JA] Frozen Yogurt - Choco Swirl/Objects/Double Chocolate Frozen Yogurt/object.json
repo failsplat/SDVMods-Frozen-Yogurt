@@ -9,6 +9,7 @@
     "EdibleBuffs": null,
     "EnableWithMod": "paradigmnomad.morefood",
     "Recipe": null,
+    "HideFromShippingCollection": true,
     "ContextTags":
     [
       "universal_like",

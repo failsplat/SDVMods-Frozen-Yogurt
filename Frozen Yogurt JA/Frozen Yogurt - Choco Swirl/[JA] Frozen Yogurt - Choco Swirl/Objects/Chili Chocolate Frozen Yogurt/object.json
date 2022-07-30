@@ -8,6 +8,7 @@
     "EdibleIsDrink": false,
     "EdibleBuffs": null,
     "Recipe": null,
+    "HideFromShippingCollection": true,
     "ContextTags":
     [
       "universal_like",

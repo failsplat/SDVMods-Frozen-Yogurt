@@ -5,6 +5,7 @@
     "ProvidesLight": false, 
     "CanPurchase": false,
     "ReserveExtraIndexCount": 5,
+    "HideFromShippingCollection": true,
     "Recipe":
     {
         "ResultCount": 1,

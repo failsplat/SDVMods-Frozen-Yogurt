@@ -16,6 +16,7 @@
       "Speed": 1,
     },
     "Recipe": null,
+    "HideFromShippingCollection": true,
     "ContextTags":
     [
       "universal_like",

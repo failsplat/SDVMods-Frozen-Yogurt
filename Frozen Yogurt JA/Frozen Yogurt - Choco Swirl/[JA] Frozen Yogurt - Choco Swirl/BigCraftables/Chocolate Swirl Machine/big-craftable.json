@@ -6,6 +6,7 @@
     "CanPurchase": false,
     "ReserveExtraIndexCount": 5,
     "DisableWithMod": "Failsplat.ChocoSwirl",
+    "HideFromShippingCollection": true,
     "Recipe":
     {
         "ResultCount": 1,
