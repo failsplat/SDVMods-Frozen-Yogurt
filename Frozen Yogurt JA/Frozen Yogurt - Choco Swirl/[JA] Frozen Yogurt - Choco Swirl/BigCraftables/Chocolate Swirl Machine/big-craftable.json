@@ -33,31 +33,31 @@
         "NameLocalization": //Used for localization. 
         { 
             "default": "Chocolate Swirl Machine",
-            "es": "", //Spansih
-            "ko": "", //Korean
-            "de": "", //German
-            "fr": "", //French
-            "hu": "", //Hungarian
-            "it": "", //Italian
-            "ja": "", //Japanese
-            "pt": "", //Portuguese
-            "ru": "", //Russian
-            "tr": "", //Turkish
-            "zh": "", //Chinese (Simplified)
+            //"es": "", //Spansih
+            //"ko": "", //Korean
+            //"de": "", //German
+            //"fr": "", //French
+            //"hu": "", //Hungarian
+            //"it": "", //Italian
+            //"ja": "", //Japanese
+            //"pt": "", //Portuguese
+            //"ru": "", //Russian
+            //"tr": "", //Turkish
+            //"zh": "", //Chinese (Simplified)
         },
         "DescriptionLocalization": //Used for localization. 
         { 
             "default": "Adds a swirl of chocolate flavor to frozen yogurt.",
-            "es": "", //Spansih
-            "ko": "", //Korean
-            "de": "", //German
-            "fr": "", //French
-            "hu": "", //Hungarian
-            "it": "", //Italian
-            "ja": "", //Japanese
-            "pt": "", //Portuguese
-            "ru": "", //Russian
-            "tr": "", //Turkish
-            "zh": "", //Chinese (Simplified)
+            //"es": "", //Spansih
+            //"ko": "", //Korean
+            //"de": "", //German
+            //"fr": "", //French
+            //"hu": "", //Hungarian
+            //"it": "", //Italian
+            //"ja": "", //Japanese
+            //"pt": "", //Portuguese
+            //"ru": "", //Russian
+            //"tr": "", //Turkish
+            //"zh": "", //Chinese (Simplified)
         }
     }

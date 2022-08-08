@@ -32,31 +32,31 @@
         "NameLocalization": //Used for localization. 
         { 
             "default": "Frozen Yogurt Machine",
-            "es": "", //Spansih
-            "ko": "", //Korean
-            "de": "", //German
-            "fr": "", //French
-            "hu": "", //Hungarian
-            "it": "", //Italian
-            "ja": "", //Japanese
-            "pt": "", //Portuguese
-            "ru": "", //Russian
-            "tr": "", //Turkish
-            "zh": "", //Chinese (Simplified)
+            //"es": "", //Spansih
+            //"ko": "", //Korean
+            //"de": "", //German
+            //"fr": "", //French
+            //"hu": "", //Hungarian
+            //"it": "", //Italian
+            //"ja": "", //Japanese
+            //"pt": "", //Portuguese
+            //"ru": "", //Russian
+            //"tr": "", //Turkish
+            //"zh": "", //Chinese (Simplified)
         },
         "DescriptionLocalization": //Used for localization. 
         { 
             "default": "Chills and churns yogurt into a frozen treat.",
-            "es": "", //Spansih
-            "ko": "", //Korean
-            "de": "", //German
-            "fr": "", //French
-            "hu": "", //Hungarian
-            "it": "", //Italian
-            "ja": "", //Japanese
-            "pt": "", //Portuguese
-            "ru": "", //Russian
-            "tr": "", //Turkish
-            "zh": "", //Chinese (Simplified)
+            //"es": "", //Spansih
+            //"ko": "", //Korean
+            //"de": "", //German
+            //"fr": "", //French
+            //"hu": "", //Hungarian
+            //"it": "", //Italian
+            //"ja": "", //Japanese
+            //"pt": "", //Portuguese
+            //"ru": "", //Russian
+            //"tr": "", //Turkish
+            //"zh": "", //Chinese (Simplified)
         }
     }
